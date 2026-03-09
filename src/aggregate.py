@@ -377,7 +377,7 @@ def agg_market_performance() -> None:
 
 
 # ══════════════════════════════════════════════════════════════
-# 8. SEGMENT PERFORMANCE  
+# 8. HIỆU SUẤT PHÂN KHÚC  
 # ══════════════════════════════════════════════════════════════
 def agg_segment_performance() -> None:
     """
