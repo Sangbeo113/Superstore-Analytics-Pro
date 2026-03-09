@@ -1,73 +1,96 @@
 """
-Module: eda.py
-Vai trò: Khám phá, kiểm tra chất lượng và nhận diện các vấn đề của tập dữ liệu Global Superstore.
+Module  : eda.py
+Vai trò : Khám phá, kiểm tra chất lượng và nhận diện các vấn đề
+          của tập dữ liệu Global Superstore trước khi làm sạch.
 """
 
+import logging
 import pandas as pd
 import config
 
-def check_basic_info(df):
-    """Kiểm tra thông tin cơ bản: kích thước, kiểu dữ liệu."""
-    print("\n" + "="*40)
-    print("1. THÔNG TIN CƠ BẢN (BASIC INFO)")
-    print("="*40)
-    print(f"Số lượng bản ghi (Rows): {df.shape[0]}")
-    print(f"Số lượng cột (Columns): {df.shape[1]}")
-    print("\nKiểu dữ liệu của các cột:")
-    print(df.dtypes)
+logger = logging.getLogger("eda")
 
-def check_missing_and_duplicates(df):
-    """Kiểm tra giá trị thiếu (Null) và dữ liệu trùng lặp."""
-    print("\n" + "="*40)
-    print("2. MISSING VALUES & DUPLICATES")
-    print("="*40)
-    
-    # Kiểm tra Missing Values
-    missing_data = df.isnull().sum()
-    missing_cols = missing_data[missing_data > 0]
-    if not missing_cols.empty:
-        print("Các cột có giá trị thiếu:")
-        print(missing_cols)
+
+# ──────────────────────────────────────────────
+def check_basic_info(df: pd.DataFrame) -> None:
+    """In thông tin cơ bản: kích thước và kiểu dữ liệu."""
+    logger.info("=== 1. THÔNG TIN CƠ BẢN ===")
+    logger.info("Số bản ghi : %d  |  Số cột : %d", df.shape[0], df.shape[1])
+    logger.info("Kiểu dữ liệu:\n%s", df.dtypes.to_string())
+
+
+# ──────────────────────────────────────────────
+def check_missing_and_duplicates(df: pd.DataFrame) -> None:
+    """Kiểm tra giá trị thiếu và dữ liệu trùng lặp."""
+    logger.info("=== 2. MISSING VALUES & DUPLICATES ===")
+
+    # Missing values
+    missing = df.isnull().sum()
+    missing = missing[missing > 0]
+    if missing.empty:
+        logger.info("Không có cột nào bị thiếu dữ liệu.")
     else:
-        print("Tuyệt vời! Không có cột nào bị thiếu dữ liệu.")
+        logger.warning("Cột thiếu dữ liệu:\n%s", missing.to_string())
 
-    # Kiểm tra Duplicates
-    if 'Row ID' in df.columns:
-        duplicates = df.duplicated(subset=['Row ID']).sum()
-        print(f"\nSố dòng trùng lặp theo Row ID: {duplicates}")
+    # Duplicates — dữ liệu raw dùng 'Row.ID' (có dấu chấm)
+    id_col = "Row.ID" if "Row.ID" in df.columns else None
+    if id_col:
+        dups = df.duplicated(subset=[id_col]).sum()
+        logger.info("Dòng trùng lặp theo %s : %d", id_col, dups)
     else:
-        duplicates = df.duplicated().sum()
-        print(f"\nSố dòng trùng lặp hoàn toàn: {duplicates}")
+        dups = df.duplicated().sum()
+        logger.info("Dòng trùng lặp hoàn toàn : %d", dups)
 
-def analyze_statistics(df):
-    """Thống kê mô tả các biến số Numeric và Categorical quan trọng."""
-    print("\n" + "="*40)
-    print("3. THỐNG KÊ MÔ TẢ (STATISTICS)")
-    print("="*40)
-    
-    print("Thống kê các biến số (Numeric):")
-    # Lấy các cột số thực/nguyên, bỏ qua mã định danh như Row ID hay Postal Code
-    num_cols = ['Sales', 'Quantity', 'Discount', 'Profit', 'Shipping Cost']
-    existing_num_cols = [col for col in num_cols if col in df.columns]
-    print(df[existing_num_cols].describe().round(2))
-    
-    print("\nPhân bổ lợi nhuận (Profit < 0):")
-    if 'Profit' in df.columns:
-        loss_orders = len(df[df['Profit'] < 0])
-        print(f"Số lượng đơn hàng bị lỗ: {loss_orders} đơn ({loss_orders/len(df):.2%})")
 
-def run_all():
-    """Hàm thực thi toàn bộ luồng EDA."""
-    print("BẮT ĐẦU QUÁ TRÌNH KHÁM PHÁ DỮ LIỆU (EDA)...")
+# ──────────────────────────────────────────────
+def analyze_statistics(df: pd.DataFrame) -> None:
+    """Thống kê mô tả các biến số quan trọng."""
+    logger.info("=== 3. THỐNG KÊ MÔ TẢ ===")
+
+    # Dữ liệu raw dùng tên gốc có dấu chấm ('Shipping.Cost')
+    num_cols = ["Sales", "Quantity", "Discount", "Profit", "Shipping.Cost"]
+    existing = [c for c in num_cols if c in df.columns]
+    logger.info("Thống kê Numeric:\n%s", df[existing].describe().round(2).to_string())
+
+    if "Profit" in df.columns:
+        loss = (df["Profit"] < 0).sum()
+        logger.info(
+            "Đơn hàng lỗ (Profit < 0) : %d  (%.2f %%)",
+            loss, loss / len(df) * 100,
+        )
+
+    if "Discount" in df.columns:
+        high_disc = (df["Discount"] > config.MAX_DISCOUNT_THRESHOLD).sum()
+        logger.warning(
+            "Đơn hàng giảm giá > %.0f %% : %d  — nguy cơ thua lỗ cao",
+            config.MAX_DISCOUNT_THRESHOLD * 100, high_disc,
+        )
+
+
+# ──────────────────────────────────────────────
+def analyze_business_overview(df: pd.DataFrame) -> None:
+    """Tổng quan phân bổ theo Market, Segment, Category."""
+    logger.info("=== 4. PHÂN BỔ NGHIỆP VỤ ===")
+
+    for col in ["Market", "Segment", "Category", "Sub.Category"]:
+        if col in df.columns:
+            logger.info("Phân bổ %s:\n%s", col, df[col].value_counts().to_string())
+
+
+# ──────────────────────────────────────────────
+def run_all() -> None:
+    """Thực thi toàn bộ luồng EDA."""
+    logger.info("BẮT ĐẦU EDA...")
     try:
-        # Đọc dữ liệu từ file gốc
-        df = pd.read_csv(config.RAW_DATA_PATH, encoding='utf-8')
+        df = pd.read_csv(config.RAW_DATA_PATH, encoding="utf-8")
         check_basic_info(df)
         check_missing_and_duplicates(df)
         analyze_statistics(df)
-        print("\nHOÀN TẤT EDA! CHUẨN BỊ CHO BƯỚC LÀM SẠCH.")
+        analyze_business_overview(df)
+        logger.info("HOÀN TẤT EDA — sẵn sàng cho bước làm sạch.")
     except FileNotFoundError:
-        print(f"LỖI: Không tìm thấy file dữ liệu tại {config.RAW_DATA_PATH}. Vui lòng kiểm tra lại.")
+        logger.error("Không tìm thấy file: %s", config.RAW_DATA_PATH)
+
 
 if __name__ == "__main__":
     run_all()

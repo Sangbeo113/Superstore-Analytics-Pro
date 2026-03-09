@@ -1,0 +1,13 @@
+order_priority,ship_mode,total_orders,avg_delay_days
+Critical,First Class,1733,2.15
+Critical,Same Day,742,0.03
+Critical,Second Class,1455,2.31
+High,First Class,3412,2.1
+High,Same Day,1269,0.04
+High,Second Class,4006,2.9
+High,Standard Class,6804,4.26
+Low,Standard Class,2423,6.48
+Medium,First Class,2356,2.33
+Medium,Same Day,688,0.04
+Medium,Second Class,4840,3.78
+Medium,Standard Class,21524,5.06
