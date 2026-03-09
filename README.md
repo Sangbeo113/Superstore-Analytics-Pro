@@ -1,29 +1,31 @@
-```
-Dự án Tối ưu hóa hiệu quả kinh doanh Global Superstore
+# Dự án Tối ưu hóa hiệu quả kinh doanh Global Superstore 🛒
 
-Graduation_Project_Superstore/
+Đây là kho lưu trữ mã nguồn cho Đồ án tốt nghiệp Phân tích Dữ liệu Bán lẻ (Retail Data Analytics) dựa trên tập dữ liệu Global Superstore. Dự án tập trung vào việc áp dụng các kỹ thuật làm sạch dữ liệu, xây dựng Star Schema, phân tích RFM Segmentation và Cohort Analysis để tối ưu hóa chiến lược giữ chân khách hàng.
+
+## Cấu trúc thư mục dự án 
+
+```text
+Superstore-Analytics-Pro/
 │
 ├── data/
-│   ├── raw/                 # Dữ liệu gốc (superstore.csv)
-│   ├── processed/           # Dữ liệu sạch (superstore_final_v1.csv)
+│   ├── raw/                 # Dữ liệu gốc (Global_Superstore.csv)
+│   ├── cleaned/             # Dữ liệu sau khi làm sạch
+│   ├── dim_fact/            # Dữ liệu mô hình Star Schema (dim_time, fact_sales...)
+│   └── aggregates/          # Dữ liệu tổng hợp cho Tableau (agg_rfm_segments...)
 │
-├── notebooks/
-│   ├── 01_data_checker.ipynb    # Kiểm tra lỗi, thống kê mô tả
-│   ├── 02_data_cleaner.ipynb    # Làm sạch & tạo cột mới (RFM, Cohort...)
-│   └── 03_data_visualizer.ipynb # Phân tích nháp tìm Insight
+├── src/                     # Source code chính của dự án
+│   ├── config.py            # Cấu hình đường dẫn, tham số RFM, ngưỡng xử lý
+│   ├── eda.py               # Module phân tích khám phá dữ liệu (EDA)
+│   ├── cleaner.py           # Module làm sạch, xử lý missing và tạo đặc trưng
+│   ├── Splitter.py          # Module tách dữ liệu thành Star Schema
+│   └── Aggregate.py         # Module tạo các Data Marts (Cohort, RFM, Pareto)
 │
-├── dashboards/                  # SẢN PHẨM CUỐI CÙNG
-│   ├── assets/                  # Tài nguyên thiết kế (Logo, màu sắc, background)
-│   │   ├── color_palette.png
-│   │   ├── logo_company.png
-│   │   └── background_layout.png
-│   ├── drafts/                  # Các bản Tableau nháp
-│   └── Final_Superstore_Story.twbx # File nộp chính thức
+├── notebooks/               # Thư mục chứa các bản nháp Jupyter Notebook
 │
-├── docs/                        # TÀI LIỆU BÁO CÁO
-│   ├── references/              # Các bài báo, nghiên cứu tham khảo
-│   └── Report_Final_Thesis.pdf  # Bản báo cáo tốt nghiệp bản cứng
+├── dashboards/              # Thư mục chứa file Tableau và tài nguyên BI
+│   └── Final_Superstore_Story.twbx 
 │
-├── .gitignore                   # File cấu hình git bỏ qua file rác
-├── README.md                    # Hướng dẫn đọc dự án
-└── requirements.txt             # Các thư viện cần cài đặt
+├── docs/                    # Tài liệu, báo cáo đồ án (Word, PDF)
+│
+├── README.md                # Tài liệu hướng dẫn (File này)
+└── requirements.txt         # Các thư viện Python: pandas, numpy, seaborn...
