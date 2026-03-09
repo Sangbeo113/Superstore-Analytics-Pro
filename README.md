@@ -1,4 +1,4 @@
-# Dự án Tối ưu hóa hiệu quả kinh doanh Global Superstore 🛒
+# Dự án Tối ưu hóa hiệu quả kinh doanh Global Superstore 
 
 Đây là kho lưu trữ mã nguồn cho Đồ án tốt nghiệp Phân tích Dữ liệu Bán lẻ (Retail Data Analytics) dựa trên tập dữ liệu Global Superstore. Dự án tập trung vào việc áp dụng các kỹ thuật làm sạch dữ liệu, xây dựng Star Schema, phân tích RFM Segmentation và Cohort Analysis để tối ưu hóa chiến lược giữ chân khách hàng.
 
