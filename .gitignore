@@ -1,0 +1,21 @@
+.env
+
+# bỏ qua các file rác của hệ thống và Python
+__pycache__/
+*.pyc
+.DS_Store
+
+# Bỏ môi trường ảo (Virtual Environment)
+venv/
+env/
+.venv/
+
+# 4. Bỏ dữ liệu thô và dữ liệu sinh ra (Tránh làm nặng GitHub)
+# (tự tải Global_Superstore.csv bỏ vào máy cá nhân)
+data/raw/*.csv
+data/cleaned/*.csv
+data/dim_fact/*.csv
+data/aggregates/*.csv
+
+# Chỉ giữ lại các file cấu trúc thư mục (như file .gitkeep nếu có)
+!data/**/.gitkeep
