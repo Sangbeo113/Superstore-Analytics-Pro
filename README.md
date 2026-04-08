@@ -176,7 +176,7 @@ Profit Margin: 10.98% → 11.72% (chỉ tăng +0.74%)
 
 *Heatmap ma trận giữ chân khách hàng theo tháng — phát hiện điểm rơi tỷ lệ retention.*
 
-> 📁 File Tableau: [`dashboards/Final_Superstore_Story.twbx`](dashboards/Final_Superstore_Story.twbx)
+>  File Tableau: [`dashboards/Final_Superstore_Story.twbx`](dashboards/Final_Superstore_Story.twbx)
 
 ---
 
@@ -347,7 +347,7 @@ Tables       ██████ (−$64,083)  LOSS MAKER
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 | Lớp | Công nghệ | Lý do chọn |
 |-----|-----------|------------|
@@ -373,7 +373,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🗺 Roadmap
+##  Roadmap
 
 - [x] **Phase 1** — Data Pipeline, Star Schema, RFM Segmentation, Dashboard 
 - [ ] **Phase 2** — Time Series Forecasting (ARIMA/Prophet)
