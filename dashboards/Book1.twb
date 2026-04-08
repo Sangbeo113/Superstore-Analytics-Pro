@@ -1,0 +1,1220 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20251.25.0313.2002                               -->
+<workbook original-version='18.1' source-build='2025.1.0 (20251.25.0313.2002)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='agg_yoy_growth' inline='true' name='federated.11sq3yr10yku7l1a2kxga17hlejt' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='agg_yoy_growth' name='textscan.07j3eha1ggtc0p1b68hwf1i8ho6k'>
+            <connection class='textscan' directory='C:/Users/Admin/Desktop/moithuctap/Superstore-Analytics-Pro/Superstore-Analytics-Pro/data/aggregates' filename='agg_yoy_growth.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.07j3eha1ggtc0p1b68hwf1i8ho6k' name='agg_yoy_growth.csv' table='[agg_yoy_growth#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='vi_VN'>
+            <column datatype='datetime' date-parse-format='yyyy' name='order_year' ordinal='0' />
+            <column datatype='string' name='market' ordinal='1' />
+            <column datatype='string' name='total_sales' ordinal='2' />
+            <column datatype='string' name='total_profit' ordinal='3' />
+            <column datatype='integer' name='total_orders' ordinal='4' />
+            <column datatype='integer' name='unique_customers' ordinal='5' />
+            <column datatype='string' name='sales_growth_pct' ordinal='6' />
+            <column datatype='string' name='profit_growth_pct' ordinal='7' />
+            <column datatype='string' name='profit_margin_pct' ordinal='8' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[agg_yoy_growth.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;vi&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₫&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;vi_VN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[order_year]</local-name>
+            <parent-name>[agg_yoy_growth.csv]</parent-name>
+            <remote-alias>order_year</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_yoy_growth.csv_38E41A57C99C44C39213A42DEFE34F72]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>market</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[market]</local-name>
+            <parent-name>[agg_yoy_growth.csv]</parent-name>
+            <remote-alias>market</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LVI_RVN' />
+            <object-id>[agg_yoy_growth.csv_38E41A57C99C44C39213A42DEFE34F72]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_sales</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[total_sales]</local-name>
+            <parent-name>[agg_yoy_growth.csv]</parent-name>
+            <remote-alias>total_sales</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LVI_RVN' />
+            <object-id>[agg_yoy_growth.csv_38E41A57C99C44C39213A42DEFE34F72]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_profit</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[total_profit]</local-name>
+            <parent-name>[agg_yoy_growth.csv]</parent-name>
+            <remote-alias>total_profit</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LVI_RVN' />
+            <object-id>[agg_yoy_growth.csv_38E41A57C99C44C39213A42DEFE34F72]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_orders]</local-name>
+            <parent-name>[agg_yoy_growth.csv]</parent-name>
+            <remote-alias>total_orders</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_yoy_growth.csv_38E41A57C99C44C39213A42DEFE34F72]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unique_customers</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[unique_customers]</local-name>
+            <parent-name>[agg_yoy_growth.csv]</parent-name>
+            <remote-alias>unique_customers</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_yoy_growth.csv_38E41A57C99C44C39213A42DEFE34F72]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sales_growth_pct</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[sales_growth_pct]</local-name>
+            <parent-name>[agg_yoy_growth.csv]</parent-name>
+            <remote-alias>sales_growth_pct</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LVI_RVN' />
+            <object-id>[agg_yoy_growth.csv_38E41A57C99C44C39213A42DEFE34F72]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>profit_growth_pct</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[profit_growth_pct]</local-name>
+            <parent-name>[agg_yoy_growth.csv]</parent-name>
+            <remote-alias>profit_growth_pct</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LVI_RVN' />
+            <object-id>[agg_yoy_growth.csv_38E41A57C99C44C39213A42DEFE34F72]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>profit_margin_pct</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[profit_margin_pct]</local-name>
+            <parent-name>[agg_yoy_growth.csv]</parent-name>
+            <remote-alias>profit_margin_pct</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LVI_RVN' />
+            <object-id>[agg_yoy_growth.csv_38E41A57C99C44C39213A42DEFE34F72]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='YoY sales' datatype='real' name='[Calculation_680888019782111238]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(SUM([total_sales]) - LOOKUP(SUM([total_sales]), -1))&#13;&#10;/ LOOKUP(SUM([total_sales]), -1)'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='agg_yoy_growth.csv' datatype='table' name='[__tableau_internal_object_id__].[agg_yoy_growth.csv_38E41A57C99C44C39213A42DEFE34F72]' role='measure' type='quantitative' />
+      <column datatype='datetime' datatype-customized='true' name='[order_year]' role='dimension' type='ordinal' />
+      <column datatype='real' datatype-customized='true' name='[profit_margin_pct]' role='measure' type='quantitative' />
+      <column datatype='real' datatype-customized='true' name='[sales_growth_pct]' role='measure' type='quantitative' />
+      <column datatype='real' datatype-customized='true' name='[total_profit]' role='measure' type='quantitative' />
+      <column datatype='real' datatype-customized='true' name='[total_sales]' role='measure' type='quantitative' />
+      <column-instance column='[total_sales]' derivation='Attribute' name='[attr:total_sales:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[total_sales]' derivation='Avg' name='[avg:total_sales:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[total_profit]' derivation='Count' name='[cnt:total_profit:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[total_sales]' derivation='Count' name='[cnt:total_sales:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[total_sales]' derivation='CountD' name='[ctd:total_sales:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[total_sales]' derivation='None' name='[none:total_sales:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[profit_margin_pct]' derivation='Sum' name='[sum:profit_margin_pct:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[sales_growth_pct]' derivation='Sum' name='[sum:sales_growth_pct:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[total_profit]' derivation='Sum' name='[sum:total_profit:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[total_sales]' derivation='Sum' name='[sum:total_sales:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/Admin/AppData/Local/Temp/TableauTemp/#TableauTemp_1mvb4dy135o41e1a5dmsy10pnq6p.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='03/20/2026 08:26:48 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table'>
+            <columns>
+              <column datatype='datetime' date-parse-format='yyyy' name='order_year' />
+            </columns>
+          </relation>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>order_year</remote-name>
+              <remote-type>7</remote-type>
+              <local-name>[order_year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>order_year</remote-alias>
+              <ordinal>0</ordinal>
+              <family>agg_yoy_growth.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[agg_yoy_growth.csv_38E41A57C99C44C39213A42DEFE34F72]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>market</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[market]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>market</remote-alias>
+              <ordinal>1</ordinal>
+              <family>agg_yoy_growth.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LVI_RVN' />
+              <object-id>[agg_yoy_growth.csv_38E41A57C99C44C39213A42DEFE34F72]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_sales</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[total_sales]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_sales</remote-alias>
+              <ordinal>2</ordinal>
+              <family>agg_yoy_growth.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LVI_RVN' />
+              <object-id>[agg_yoy_growth.csv_38E41A57C99C44C39213A42DEFE34F72]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_profit</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[total_profit]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_profit</remote-alias>
+              <ordinal>3</ordinal>
+              <family>agg_yoy_growth.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LVI_RVN' />
+              <object-id>[agg_yoy_growth.csv_38E41A57C99C44C39213A42DEFE34F72]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_orders</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[total_orders]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_orders</remote-alias>
+              <ordinal>4</ordinal>
+              <family>agg_yoy_growth.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[agg_yoy_growth.csv_38E41A57C99C44C39213A42DEFE34F72]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>unique_customers</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[unique_customers]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>unique_customers</remote-alias>
+              <ordinal>5</ordinal>
+              <family>agg_yoy_growth.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[agg_yoy_growth.csv_38E41A57C99C44C39213A42DEFE34F72]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>sales_growth_pct</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[sales_growth_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>sales_growth_pct</remote-alias>
+              <ordinal>6</ordinal>
+              <family>agg_yoy_growth.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>25</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LVI_RVN' />
+              <object-id>[agg_yoy_growth.csv_38E41A57C99C44C39213A42DEFE34F72]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>profit_growth_pct</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[profit_growth_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>profit_growth_pct</remote-alias>
+              <ordinal>7</ordinal>
+              <family>agg_yoy_growth.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>25</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LVI_RVN' />
+              <object-id>[agg_yoy_growth.csv_38E41A57C99C44C39213A42DEFE34F72]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>profit_margin_pct</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[profit_margin_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>profit_margin_pct</remote-alias>
+              <ordinal>8</ordinal>
+              <family>agg_yoy_growth.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>30</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LVI_RVN' />
+              <object-id>[agg_yoy_growth.csv_38E41A57C99C44C39213A42DEFE34F72]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.11sq3yr10yku7l1a2kxga17hlejt].[avg:total_sales:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.11sq3yr10yku7l1a2kxga17hlejt].[cnt:total_profit:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.11sq3yr10yku7l1a2kxga17hlejt].[sum:sales_growth_pct:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.11sq3yr10yku7l1a2kxga17hlejt].[sum:total_sales:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.11sq3yr10yku7l1a2kxga17hlejt].[attr:total_sales:ok]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.11sq3yr10yku7l1a2kxga17hlejt].[cnt:total_sales:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.11sq3yr10yku7l1a2kxga17hlejt].[ctd:total_sales:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.11sq3yr10yku7l1a2kxga17hlejt].[none:total_sales:ok]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.11sq3yr10yku7l1a2kxga17hlejt].[sum:profit_margin_pct:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.11sq3yr10yku7l1a2kxga17hlejt].[sum:total_profit:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='agg_yoy_growth.csv' id='agg_yoy_growth.csv_38E41A57C99C44C39213A42DEFE34F72'>
+            <properties context=''>
+              <relation connection='textscan.07j3eha1ggtc0p1b68hwf1i8ho6k' name='agg_yoy_growth.csv' table='[agg_yoy_growth#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='vi_VN'>
+                  <column datatype='datetime' date-parse-format='yyyy' name='order_year' ordinal='0' />
+                  <column datatype='string' name='market' ordinal='1' />
+                  <column datatype='string' name='total_sales' ordinal='2' />
+                  <column datatype='string' name='total_profit' ordinal='3' />
+                  <column datatype='integer' name='total_orders' ordinal='4' />
+                  <column datatype='integer' name='unique_customers' ordinal='5' />
+                  <column datatype='string' name='sales_growth_pct' ordinal='6' />
+                  <column datatype='string' name='profit_growth_pct' ordinal='7' />
+                  <column datatype='string' name='profit_margin_pct' ordinal='8' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table'>
+                <columns>
+                  <column datatype='datetime' date-parse-format='yyyy' name='order_year' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Growth'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='agg_yoy_growth' name='federated.11sq3yr10yku7l1a2kxga17hlejt' />
+          </datasources>
+          <datasource-dependencies datasource='federated.11sq3yr10yku7l1a2kxga17hlejt'>
+            <column datatype='datetime' datatype-customized='true' name='[order_year]' role='dimension' type='ordinal' />
+            <column datatype='real' datatype-customized='true' name='[profit_margin_pct]' role='measure' type='quantitative' />
+            <column datatype='real' datatype-customized='true' name='[sales_growth_pct]' role='measure' type='quantitative' />
+            <column-instance column='[profit_margin_pct]' derivation='Sum' name='[sum:profit_margin_pct:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[sales_growth_pct]' derivation='Sum' name='[sum:sales_growth_pct:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[order_year]' derivation='Year' name='[yr:order_year:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.11sq3yr10yku7l1a2kxga17hlejt].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.11sq3yr10yku7l1a2kxga17hlejt].[sum:profit_margin_pct:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.11sq3yr10yku7l1a2kxga17hlejt].[sum:sales_growth_pct:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.11sq3yr10yku7l1a2kxga17hlejt].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.11sq3yr10yku7l1a2kxga17hlejt].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.11sq3yr10yku7l1a2kxga17hlejt].[Multiple Values]</rows>
+        <cols>([federated.11sq3yr10yku7l1a2kxga17hlejt].[yr:order_year:ok] / [federated.11sq3yr10yku7l1a2kxga17hlejt].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{3DB3B701-583D-43F1-872F-CDB993B5E377}' />
+    </worksheet>
+    <worksheet name='KPI_Growth'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='agg_yoy_growth' name='federated.11sq3yr10yku7l1a2kxga17hlejt' />
+          </datasources>
+          <datasource-dependencies datasource='federated.11sq3yr10yku7l1a2kxga17hlejt'>
+            <column datatype='real' datatype-customized='true' name='[sales_growth_pct]' role='measure' type='quantitative' />
+            <column-instance column='[sales_growth_pct]' derivation='Sum' name='[sum:sales_growth_pct:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.11sq3yr10yku7l1a2kxga17hlejt].[sum:sales_growth_pct:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{D3059B20-F1E6-424A-9ACF-B5F19DD3EF01}' />
+    </worksheet>
+    <worksheet name='KPI_Margin'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='agg_yoy_growth' name='federated.11sq3yr10yku7l1a2kxga17hlejt' />
+          </datasources>
+          <datasource-dependencies datasource='federated.11sq3yr10yku7l1a2kxga17hlejt'>
+            <column datatype='real' datatype-customized='true' name='[profit_margin_pct]' role='measure' type='quantitative' />
+            <column-instance column='[profit_margin_pct]' derivation='Sum' name='[sum:profit_margin_pct:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' data-class='total' field='[federated.11sq3yr10yku7l1a2kxga17hlejt].[sum:profit_margin_pct:qk]' value='p0.00%' />
+            <format attr='text-format' data-class='subtotal' field='[federated.11sq3yr10yku7l1a2kxga17hlejt].[sum:profit_margin_pct:qk]' value='p0.00%' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.11sq3yr10yku7l1a2kxga17hlejt].[sum:profit_margin_pct:qk]' value='p0.00%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.11sq3yr10yku7l1a2kxga17hlejt].[sum:profit_margin_pct:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{FDAE2183-986C-4095-AE93-7AFC4FDA779D}' />
+    </worksheet>
+    <worksheet name='KPI_Profit'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='agg_yoy_growth' name='federated.11sq3yr10yku7l1a2kxga17hlejt' />
+          </datasources>
+          <datasource-dependencies datasource='federated.11sq3yr10yku7l1a2kxga17hlejt'>
+            <column-instance column='[total_profit]' derivation='Sum' name='[sum:total_profit:qk]' pivot='key' type='quantitative' />
+            <column datatype='real' datatype-customized='true' name='[total_profit]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.11sq3yr10yku7l1a2kxga17hlejt].[sum:total_profit:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{83B87A24-E760-4692-B0F5-08D765367494}' />
+    </worksheet>
+    <worksheet name='KPI_Sale'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='agg_yoy_growth' name='federated.11sq3yr10yku7l1a2kxga17hlejt' />
+          </datasources>
+          <datasource-dependencies datasource='federated.11sq3yr10yku7l1a2kxga17hlejt'>
+            <column caption='YoY sales' datatype='real' name='[Calculation_680888019782111238]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(SUM([total_sales]) - LOOKUP(SUM([total_sales]), -1))&#13;&#10;/ LOOKUP(SUM([total_sales]), -1)'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='agg_yoy_growth.csv' datatype='table' name='[__tableau_internal_object_id__].[agg_yoy_growth.csv_38E41A57C99C44C39213A42DEFE34F72]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[agg_yoy_growth.csv_38E41A57C99C44C39213A42DEFE34F72]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:agg_yoy_growth.csv_38E41A57C99C44C39213A42DEFE34F72:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_sales]' derivation='Sum' name='[sum:total_sales:qk]' pivot='key' type='quantitative' />
+            <column datatype='real' datatype-customized='true' name='[total_sales]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_680888019782111238]' derivation='User' name='[usr:Calculation_680888019782111238:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.11sq3yr10yku7l1a2kxga17hlejt].[usr:Calculation_680888019782111238:qk]' value='p0.0%' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.11sq3yr10yku7l1a2kxga17hlejt].[usr:Calculation_680888019782111238:qk]' value='p0.0%' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='in-tooltip' field='[federated.11sq3yr10yku7l1a2kxga17hlejt].[usr:Calculation_680888019782111238:qk]' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.11sq3yr10yku7l1a2kxga17hlejt].[sum:total_sales:qk]' />
+              <text column='[federated.11sq3yr10yku7l1a2kxga17hlejt].[usr:Calculation_680888019782111238:qk]' />
+              <text column='[federated.11sq3yr10yku7l1a2kxga17hlejt].[__tableau_internal_object_id__].[cnt:agg_yoy_growth.csv_38E41A57C99C44C39213A42DEFE34F72:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontname='Benton Sans Book'>Total Sales</run>
+                <run>Æ&#10;</run>
+                <run fontname='Benton Sans Book'><![CDATA[<[federated.11sq3yr10yku7l1a2kxga17hlejt].[sum:total_sales:qk]>]]></run>
+                <run>&#10;+</run>
+                <run> YoY</run>
+                <run>Æ&#10;</run>
+                <run><![CDATA[<[federated.11sq3yr10yku7l1a2kxga17hlejt].[__tableau_internal_object_id__].[cnt:agg_yoy_growth.csv_38E41A57C99C44C39213A42DEFE34F72:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{76E70F72-D5D7-4F4A-9906-6A13C2161201}' />
+    </worksheet>
+    <worksheet name='Market_Performance'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='agg_yoy_growth' name='federated.11sq3yr10yku7l1a2kxga17hlejt' />
+          </datasources>
+          <datasource-dependencies datasource='federated.11sq3yr10yku7l1a2kxga17hlejt'>
+            <column datatype='string' name='[market]' role='dimension' type='nominal' />
+            <column-instance column='[market]' derivation='None' name='[none:market:nk]' pivot='key' type='nominal' />
+            <column datatype='real' datatype-customized='true' name='[profit_margin_pct]' role='measure' type='quantitative' />
+            <column-instance column='[profit_margin_pct]' derivation='Sum' name='[sum:profit_margin_pct:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_sales]' derivation='Sum' name='[sum:total_sales:qk]' pivot='key' type='quantitative' />
+            <column datatype='real' datatype-customized='true' name='[total_sales]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.11sq3yr10yku7l1a2kxga17hlejt].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.11sq3yr10yku7l1a2kxga17hlejt].[sum:profit_margin_pct:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.11sq3yr10yku7l1a2kxga17hlejt].[sum:total_sales:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.11sq3yr10yku7l1a2kxga17hlejt].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.11sq3yr10yku7l1a2kxga17hlejt].[sum:profit_margin_pct:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.11sq3yr10yku7l1a2kxga17hlejt].[Multiple Values]</rows>
+        <cols>([federated.11sq3yr10yku7l1a2kxga17hlejt].[none:market:nk] / [federated.11sq3yr10yku7l1a2kxga17hlejt].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{E1FC8C69-245F-4934-8C03-478D868BA400}' />
+    </worksheet>
+    <worksheet name='Profit Margin Trend'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='agg_yoy_growth' name='federated.11sq3yr10yku7l1a2kxga17hlejt' />
+          </datasources>
+          <datasource-dependencies datasource='federated.11sq3yr10yku7l1a2kxga17hlejt'>
+            <column datatype='datetime' datatype-customized='true' name='[order_year]' role='dimension' type='ordinal' />
+            <column datatype='real' datatype-customized='true' name='[profit_margin_pct]' role='measure' type='quantitative' />
+            <column-instance column='[profit_margin_pct]' derivation='Sum' name='[sum:profit_margin_pct:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[order_year]' derivation='Year-Trunc' name='[tyr:order_year:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.11sq3yr10yku7l1a2kxga17hlejt].[sum:profit_margin_pct:qk]' value='p0.0%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.11sq3yr10yku7l1a2kxga17hlejt].[sum:profit_margin_pct:qk]</rows>
+        <cols>[federated.11sq3yr10yku7l1a2kxga17hlejt].[tyr:order_year:qk]</cols>
+      </table>
+      <simple-id uuid='{264E9122-B465-48E0-902C-1BD2DCE0D98F}' />
+    </worksheet>
+    <worksheet name='Sales_Profit_Trend'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='agg_yoy_growth' name='federated.11sq3yr10yku7l1a2kxga17hlejt' />
+          </datasources>
+          <datasource-dependencies datasource='federated.11sq3yr10yku7l1a2kxga17hlejt'>
+            <column datatype='datetime' datatype-customized='true' name='[order_year]' role='dimension' type='ordinal' />
+            <column datatype='real' datatype-customized='true' name='[profit_margin_pct]' role='measure' type='quantitative' />
+            <column-instance column='[profit_margin_pct]' derivation='Sum' name='[sum:profit_margin_pct:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_profit]' derivation='Sum' name='[sum:total_profit:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_sales]' derivation='Sum' name='[sum:total_sales:qk]' pivot='key' type='quantitative' />
+            <column datatype='real' datatype-customized='true' name='[total_profit]' role='measure' type='quantitative' />
+            <column datatype='real' datatype-customized='true' name='[total_sales]' role='measure' type='quantitative' />
+            <column-instance column='[order_year]' derivation='Year-Trunc' name='[tyr:order_year:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.11sq3yr10yku7l1a2kxga17hlejt].[sum:total_sales:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.11sq3yr10yku7l1a2kxga17hlejt].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.11sq3yr10yku7l1a2kxga17hlejt].[sum:total_profit:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.11sq3yr10yku7l1a2kxga17hlejt].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.11sq3yr10yku7l1a2kxga17hlejt].[sum:total_sales:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.11sq3yr10yku7l1a2kxga17hlejt].[:Measure Names]' />
+              <tooltip column='[federated.11sq3yr10yku7l1a2kxga17hlejt].[sum:profit_margin_pct:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.11sq3yr10yku7l1a2kxga17hlejt].[sum:total_profit:qk] + [federated.11sq3yr10yku7l1a2kxga17hlejt].[sum:total_sales:qk])</rows>
+        <cols>[federated.11sq3yr10yku7l1a2kxga17hlejt].[tyr:order_year:qk]</cols>
+      </table>
+      <simple-id uuid='{05CD8B6D-A110-458B-8433-9E39AF3319B6}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='800' maxwidth='1200' minheight='560' minwidth='420' sizing-mode='range' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97930' id='12' param='horz' type-v2='layout-flow' w='98666' x='667' y='1035'>
+            <zone h='97930' id='10' type-v2='layout-basic' w='98666' x='667' y='1035' />
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='64683' id='9' name='Sales_Profit_Trend' w='66667' x='83' y='35058' />
+        <zone h='33247' id='13' param='horz' type-v2='layout-flow' w='66667' x='667' y='1035'>
+          <zone h='33247' id='14' name='KPI_Sale' w='66667' x='667' y='1035'>
+            <layout-cache fixed-size-w='120' type-h='cell' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+        </zone>
+        <zone h='33247' id='15' name='KPI_Profit' w='10667' x='23333' y='1035'>
+          <layout-cache type-h='fixed' type-w='fixed' />
+        </zone>
+        <zone h='33247' id='16' name='KPI_Margin' w='10667' x='34167' y='1035'>
+          <layout-cache type-h='fixed' type-w='fixed' />
+        </zone>
+        <zone h='33247' id='17' name='KPI_Growth' w='10667' x='11667' y='1035'>
+          <layout-cache type-h='fixed' type-w='fixed' />
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1400' minheight='1400' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='19' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='18' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
+                <zone fixed-size='258' h='33247' id='14' is-fixed='true' name='KPI_Sale' w='66667' x='667' y='1035'>
+                  <layout-cache fixed-size-w='120' type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='266' h='33247' id='17' is-fixed='true' name='KPI_Growth' w='10667' x='11667' y='1035'>
+                  <layout-cache type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='266' h='33247' id='15' is-fixed='true' name='KPI_Profit' w='10667' x='23333' y='1035'>
+                  <layout-cache type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='266' h='33247' id='16' is-fixed='true' name='KPI_Margin' w='10667' x='34167' y='1035'>
+                  <layout-cache type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='64683' id='9' is-fixed='true' name='Sales_Profit_Trend' w='66667' x='83' y='35058'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{2BE7D5F9-0697-4845-9BD0-01FAA080D3CA}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.5' source-height='44'>
+    <window class='worksheet' name='Sales_Profit_Trend'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.11sq3yr10yku7l1a2kxga17hlejt].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{C1D6419D-7F1B-488C-AA11-70D7EA3C0DAF}' />
+    </window>
+    <window class='worksheet' name='Profit Margin Trend'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1C231022-FFB4-4B9C-938C-69EB3CDA09FC}' />
+    </window>
+    <window class='worksheet' name='Growth'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.11sq3yr10yku7l1a2kxga17hlejt].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{39347B1D-5901-4699-A150-F7A37C43E5DB}' />
+    </window>
+    <window class='worksheet' name='Market_Performance'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.11sq3yr10yku7l1a2kxga17hlejt].[sum:profit_margin_pct:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C6E14148-249F-4B36-BA39-F44E33B7B94F}' />
+    </window>
+    <window class='worksheet' maximized='true' name='KPI_Sale'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{45A7C507-F45A-49DD-8A1B-9B0B80DF7AC0}' />
+    </window>
+    <window class='worksheet' name='KPI_Profit'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{13C5939B-03DA-4FB1-9120-C5DE35E99984}' />
+    </window>
+    <window class='worksheet' name='KPI_Margin'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{252EAA5D-52BF-4447-BC68-B69F2F88CDA3}' />
+    </window>
+    <window class='worksheet' name='KPI_Growth'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{89A57025-2572-4E87-B6B4-DD409A56B04B}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='KPI_Growth'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='KPI_Margin'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='KPI_Profit'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='KPI_Sale'>
+          <zoom type='fit-height' />
+        </viewpoint>
+        <viewpoint name='Sales_Profit_Trend'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{BF02D3CE-7EFE-427E-A37F-B688B2301D31}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='100' name='KPI_Sale' width='124'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
