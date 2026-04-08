@@ -285,10 +285,6 @@ python src/main.py
 # Bỏ qua EDA, chạy nhanh hơn
 python src/main.py --skip-eda
 
-# Chỉ chạy lại Data Marts (khi sửa aggregate.py)
-python src/main.py --only-agg
-```
-
 ### 6. Kết nối Tableau
 
 Mở Tableau Desktop → Connect to File → chọn các file CSV trong `data/aggregates/` và `data/dim_fact/`.
