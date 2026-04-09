@@ -151,7 +151,7 @@ def agg_product_pareto() -> None:
         .agg(
             total_profit  = ("profit", "sum"),
             total_sales   = ("sales",  "sum"),
-            total_orders  = ("order_id", "count"),
+            total_orders  = ("order_id", "nunique"),
         )
         .reset_index()
         .sort_values("total_profit", ascending=False)
@@ -190,7 +190,7 @@ def agg_yoy_growth() -> None:
         .agg(
             total_sales   = ("sales",  "sum"),
             total_profit  = ("profit", "sum"),
-            total_orders  = ("order_id", "count"),
+            total_orders  = ("order_id", "nunique"),
             unique_customers = ("customer_id", "nunique"),
         )
         .reset_index()
@@ -211,7 +211,7 @@ def agg_yoy_growth() -> None:
         .agg(
             total_sales      = ("sales",  "sum"),
             total_profit     = ("profit", "sum"),
-            total_orders     = ("order_id", "count"),
+            total_orders     = ("order_id", "nunique"),
             unique_customers = ("customer_id", "nunique"),
         )
         .reset_index()
@@ -258,7 +258,7 @@ def agg_discount_impact() -> None:
     impact = (
         df.groupby("discount_band", observed=True)
         .agg(
-            total_orders     = ("order_id",  "count"),
+            total_orders     = ("order_id",  "nunique"),
             avg_profit       = ("profit",    "mean"),
             total_profit     = ("profit",    "sum"),
             avg_sales        = ("sales",     "mean"),
@@ -310,7 +310,7 @@ def agg_shipping_analysis() -> None:
     ship_agg = (
         df.groupby(["ship_mode", "market"])
         .agg(
-            total_orders      = ("order_id",       "count"),
+            total_orders      = ("order_id",       "nunique"),
             avg_delay_days    = ("ship_delay_days", "mean"),
             max_delay_days    = ("ship_delay_days", "max"),
             avg_shipping_cost = ("shipping_cost",   "mean"),
@@ -325,7 +325,7 @@ def agg_shipping_analysis() -> None:
     priority_ship = (
         df.groupby(["order_priority", "ship_mode"])
         .agg(
-            total_orders   = ("order_id",       "count"),
+            total_orders   = ("order_id",       "nunique"),
             avg_delay_days = ("ship_delay_days", "mean"),
         )
         .reset_index()
@@ -355,7 +355,7 @@ def agg_market_performance() -> None:
         .agg(
             total_sales      = ("sales",       "sum"),
             total_profit     = ("profit",      "sum"),
-            total_orders     = ("order_id",    "count"),
+            total_orders     = ("order_id",    "nunique"),
             unique_customers = ("customer_id", "nunique"),
             avg_order_value  = ("sales",       "mean"),
             avg_discount     = ("discount",    "mean"),
@@ -398,7 +398,7 @@ def agg_segment_performance() -> None:
         .agg(
             total_sales      = ("sales",       "sum"),
             total_profit     = ("profit",      "sum"),
-            total_orders     = ("order_id",    "count"),
+            total_orders     = ("order_id",    "nunique"),
             unique_customers = ("customer_id", "nunique"),
             avg_order_value  = ("sales",       "mean"),
         )
@@ -413,7 +413,7 @@ def agg_segment_performance() -> None:
         .agg(
             total_sales  = ("sales",  "sum"),
             total_profit = ("profit", "sum"),
-            order_count  = ("order_id", "count"),
+            order_count  = ("order_id", "nunique"),
         )
         .reset_index()
     )

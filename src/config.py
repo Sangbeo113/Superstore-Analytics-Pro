@@ -37,3 +37,9 @@ RFM_BINS = int(os.getenv('RFM_BINS', 5))
 
 MAX_DISCOUNT_THRESHOLD = float(os.getenv('MAX_DISCOUNT_THRESHOLD', 0.8))
 MIN_PROFIT_MARGIN_WARNING = float(os.getenv('MIN_PROFIT_MARGIN_WARNING', -0.5))
+
+# ==========================================
+# CẤU HÌNH CHO PHÂN TÍCH DISCOUNT IMPACT
+# ==========================================
+DISCOUNT_BINS = [0.0, 0.1, 0.3, 0.5, 1.0]
+DISCOUNT_LABELS = ["0-10%", "10-30%", "30-50%", "50%+"]
