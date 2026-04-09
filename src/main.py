@@ -47,8 +47,8 @@ def run_pipeline(skip_eda: bool = False, only_agg: bool = False) -> None:
 
     elapsed = time.time() - start
     logger.info("══════════════════════════════════════════")
-    logger.info("✅ PIPELINE HOÀN TẤT trong %.1f giây", elapsed)
-    logger.info("📂 Kiểm tra kết quả tại:")
+    logger.info(" PIPELINE HOÀN TẤT trong %.1f giây", elapsed)
+    logger.info(" Kiểm tra kết quả tại:")
     logger.info("   • Cleaned data : %s", config.CLEANED_DIR)
     logger.info("   • Star Schema  : %s", config.DIM_FACT_DIR)
     logger.info("   • Data Marts   : %s", config.AGG_DIR)
