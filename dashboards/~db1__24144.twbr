@@ -1,0 +1,3256 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20261.26.0226.1626                               -->
+<workbook original-version='18.1' source-build='2026.1.0 (20261.26.0226.1626)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.IndividualControlFormatting.true...IndividualControlFormatting />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Select Year' datatype='integer' name='[Parameter 1]' param-domain-type='list' role='measure' type='quantitative' value='2011'>
+        <calculation class='tableau' formula='2011' />
+        <members>
+          <member value='2011' />
+          <member value='2012' />
+          <member value='2013' />
+          <member value='2014' />
+        </members>
+      </column>
+      <column caption='Select Market' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;Africa&quot;'>
+        <calculation class='tableau' formula='&quot;Africa&quot;' />
+        <members>
+          <member value='&quot;Africa&quot;' />
+          <member value='&quot;APAC&quot;' />
+          <member value='&quot;Canada&quot;' />
+          <member value='&quot;EMEA&quot;' />
+          <member value='&quot;EU&quot;' />
+          <member value='&quot;LATAM&quot;' />
+          <member value='&quot;US&quot;' />
+        </members>
+      </column>
+      <column caption='Select Metric' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;Sales&quot;'>
+        <calculation class='tableau' formula='&quot;Sales&quot;' />
+        <members>
+          <member value='&quot;Sales&quot;' />
+          <member value='&quot;Profit&quot;' />
+          <member value='&quot;Orders&quot;' />
+          <member value='&quot;Customers&quot;' />
+        </members>
+      </column>
+      <column caption='Top N Products' datatype='integer' name='[Parameter 4]' param-domain-type='list' role='measure' type='quantitative' value='5'>
+        <calculation class='tableau' formula='5' />
+        <members>
+          <member value='5' />
+          <member value='10' />
+          <member value='17' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='Market Performance' inline='true' name='federated.1a7agj317ep6b410grb7r0qag6po' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='agg_market_performance' name='textscan.1c6kssi15us9av12hv00u0e37u3t'>
+            <connection class='textscan' directory='C:/Users/Sang1/Downloads/Superstore-Analytics-Pro/data/aggregates' filename='agg_market_performance.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1c6kssi15us9av12hv00u0e37u3t' name='agg_market_performance.csv' table='[agg_market_performance#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='market' ordinal='0' />
+            <column datatype='integer' name='order_year' ordinal='1' />
+            <column datatype='real' name='total_sales' ordinal='2' />
+            <column datatype='real' name='total_profit' ordinal='3' />
+            <column datatype='integer' name='total_orders' ordinal='4' />
+            <column datatype='integer' name='unique_customers' ordinal='5' />
+            <column datatype='real' name='avg_order_value' ordinal='6' />
+            <column datatype='real' name='avg_discount' ordinal='7' />
+            <column datatype='real' name='profit_margin_pct' ordinal='8' />
+            <column datatype='real' name='sales_share_pct' ordinal='9' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[agg_market_performance.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>market</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[market]</local-name>
+            <parent-name>[agg_market_performance.csv]</parent-name>
+            <remote-alias>market</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[agg_market_performance.csv_FB8C971107E845FA8BC4204BE2E83698]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[order_year]</local-name>
+            <parent-name>[agg_market_performance.csv]</parent-name>
+            <remote-alias>order_year</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_market_performance.csv_FB8C971107E845FA8BC4204BE2E83698]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_sales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_sales]</local-name>
+            <parent-name>[agg_market_performance.csv]</parent-name>
+            <remote-alias>total_sales</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_market_performance.csv_FB8C971107E845FA8BC4204BE2E83698]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_profit</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_profit]</local-name>
+            <parent-name>[agg_market_performance.csv]</parent-name>
+            <remote-alias>total_profit</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_market_performance.csv_FB8C971107E845FA8BC4204BE2E83698]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_orders]</local-name>
+            <parent-name>[agg_market_performance.csv]</parent-name>
+            <remote-alias>total_orders</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_market_performance.csv_FB8C971107E845FA8BC4204BE2E83698]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unique_customers</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[unique_customers]</local-name>
+            <parent-name>[agg_market_performance.csv]</parent-name>
+            <remote-alias>unique_customers</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_market_performance.csv_FB8C971107E845FA8BC4204BE2E83698]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_order_value</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_order_value]</local-name>
+            <parent-name>[agg_market_performance.csv]</parent-name>
+            <remote-alias>avg_order_value</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_market_performance.csv_FB8C971107E845FA8BC4204BE2E83698]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_discount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_discount]</local-name>
+            <parent-name>[agg_market_performance.csv]</parent-name>
+            <remote-alias>avg_discount</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_market_performance.csv_FB8C971107E845FA8BC4204BE2E83698]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>profit_margin_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[profit_margin_pct]</local-name>
+            <parent-name>[agg_market_performance.csv]</parent-name>
+            <remote-alias>profit_margin_pct</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_market_performance.csv_FB8C971107E845FA8BC4204BE2E83698]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sales_share_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[sales_share_pct]</local-name>
+            <parent-name>[agg_market_performance.csv]</parent-name>
+            <remote-alias>sales_share_pct</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_market_performance.csv_FB8C971107E845FA8BC4204BE2E83698]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Margin % (Safe)' datatype='real' name='[Calculation_1453611481161730]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([total_profit]) / SUM([total_sales]) * 100' />
+      </column>
+      <column caption='Margin_Safe_Pct' datatype='real' name='[Calculation_1453611508727811]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([total_profit]) / SUM([total_sales]) * 100' />
+      </column>
+      <column caption='Market Color' datatype='string' name='[Calculation_1453611509055492]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='IF [Calculation_1453611508727811] &gt;= 12 THEN &quot;Good&quot;&#13;&#10;ELSEIF [Calculation_1453611508727811] &gt;= 8 THEN &quot;Warning&quot;&#13;&#10;ELSE &quot;Critical&quot;&#13;&#10;END' />
+      </column>
+      <column caption='agg_market_performance.csv' datatype='table' name='[__tableau_internal_object_id__].[agg_market_performance.csv_FB8C971107E845FA8BC4204BE2E83698]' role='measure' type='quantitative' />
+      <column caption='Avg Discount' datatype='real' name='[avg_discount]' role='measure' type='quantitative' />
+      <column caption='Avg Order Value' datatype='real' name='[avg_order_value]' role='measure' type='quantitative' />
+      <column caption='Market' datatype='string' name='[market]' role='dimension' type='nominal' />
+      <column caption='Order Year' datatype='integer' name='[order_year]' role='dimension' type='quantitative' />
+      <column caption='Profit Margin Pct' datatype='real' name='[profit_margin_pct]' role='measure' type='quantitative' />
+      <column caption='Sales Share Pct' datatype='real' name='[sales_share_pct]' role='measure' type='quantitative' />
+      <column caption='Total Orders' datatype='integer' name='[total_orders]' role='measure' type='quantitative' />
+      <column caption='Total Profit' datatype='real' name='[total_profit]' role='measure' type='quantitative' />
+      <column caption='Total Sales' datatype='real' name='[total_sales]' role='measure' type='quantitative' />
+      <column caption='Unique Customers' datatype='integer' name='[unique_customers]' role='measure' type='quantitative' />
+      <column-instance column='[Calculation_1453611509055492]' derivation='User' name='[usr:Calculation_1453611509055492:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[usr:Calculation_1453611509055492:nk]' type='palette'>
+            <map to='#1d9e75'>
+              <bucket>&quot;Good&quot;</bucket>
+            </map>
+            <map to='#e24b4a'>
+              <bucket>&quot;Critical&quot;</bucket>
+            </map>
+            <map to='#ef9f27'>
+              <bucket>&quot;Warning&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='agg_market_performance.csv' id='agg_market_performance.csv_FB8C971107E845FA8BC4204BE2E83698'>
+            <properties context=''>
+              <relation connection='textscan.1c6kssi15us9av12hv00u0e37u3t' name='agg_market_performance.csv' table='[agg_market_performance#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='market' ordinal='0' />
+                  <column datatype='integer' name='order_year' ordinal='1' />
+                  <column datatype='real' name='total_sales' ordinal='2' />
+                  <column datatype='real' name='total_profit' ordinal='3' />
+                  <column datatype='integer' name='total_orders' ordinal='4' />
+                  <column datatype='integer' name='unique_customers' ordinal='5' />
+                  <column datatype='real' name='avg_order_value' ordinal='6' />
+                  <column datatype='real' name='avg_discount' ordinal='7' />
+                  <column datatype='real' name='profit_margin_pct' ordinal='8' />
+                  <column datatype='real' name='sales_share_pct' ordinal='9' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='Segment Performance' inline='true' name='federated.0a2kk1f0dp5y251aca3eq0xk1tqp' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='agg_segment_performance' name='textscan.0qhhsjs04swfue1be62dz1398j4e'>
+            <connection class='textscan' directory='C:/Users/Sang1/Downloads/Superstore-Analytics-Pro/data/aggregates' filename='agg_segment_performance.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0qhhsjs04swfue1be62dz1398j4e' name='agg_segment_performance.csv' table='[agg_segment_performance#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='segment' ordinal='0' />
+            <column datatype='integer' name='order_year' ordinal='1' />
+            <column datatype='real' name='total_sales' ordinal='2' />
+            <column datatype='real' name='total_profit' ordinal='3' />
+            <column datatype='integer' name='total_orders' ordinal='4' />
+            <column datatype='integer' name='unique_customers' ordinal='5' />
+            <column datatype='real' name='avg_order_value' ordinal='6' />
+            <column datatype='real' name='profit_margin_pct' ordinal='7' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[agg_segment_performance.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>segment</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[segment]</local-name>
+            <parent-name>[agg_segment_performance.csv]</parent-name>
+            <remote-alias>segment</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[agg_segment_performance.csv_6DDD9D917232407C9C6BC1C8F107C186]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[order_year]</local-name>
+            <parent-name>[agg_segment_performance.csv]</parent-name>
+            <remote-alias>order_year</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_segment_performance.csv_6DDD9D917232407C9C6BC1C8F107C186]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_sales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_sales]</local-name>
+            <parent-name>[agg_segment_performance.csv]</parent-name>
+            <remote-alias>total_sales</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_segment_performance.csv_6DDD9D917232407C9C6BC1C8F107C186]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_profit</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_profit]</local-name>
+            <parent-name>[agg_segment_performance.csv]</parent-name>
+            <remote-alias>total_profit</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_segment_performance.csv_6DDD9D917232407C9C6BC1C8F107C186]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_orders]</local-name>
+            <parent-name>[agg_segment_performance.csv]</parent-name>
+            <remote-alias>total_orders</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_segment_performance.csv_6DDD9D917232407C9C6BC1C8F107C186]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unique_customers</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[unique_customers]</local-name>
+            <parent-name>[agg_segment_performance.csv]</parent-name>
+            <remote-alias>unique_customers</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_segment_performance.csv_6DDD9D917232407C9C6BC1C8F107C186]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_order_value</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_order_value]</local-name>
+            <parent-name>[agg_segment_performance.csv]</parent-name>
+            <remote-alias>avg_order_value</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_segment_performance.csv_6DDD9D917232407C9C6BC1C8F107C186]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>profit_margin_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[profit_margin_pct]</local-name>
+            <parent-name>[agg_segment_performance.csv]</parent-name>
+            <remote-alias>profit_margin_pct</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_segment_performance.csv_6DDD9D917232407C9C6BC1C8F107C186]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='real' default-format='p0.00%' name='[Calculation1]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(ZN(SUM([total_orders])) - LOOKUP(ZN(SUM([total_orders])), 1)) / ABS(LOOKUP(ZN(SUM([total_orders])), 1))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Center_Percentage' datatype='real' name='[Calculation_1453611524796428]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF [segment] = &apos;Consumer&apos; THEN [total_orders] END) / SUM([total_orders])' />
+      </column>
+      <column caption='agg_segment_performance.csv' datatype='table' name='[__tableau_internal_object_id__].[agg_segment_performance.csv_6DDD9D917232407C9C6BC1C8F107C186]' role='measure' type='quantitative' />
+      <column caption='Avg Order Value' datatype='real' name='[avg_order_value]' role='measure' type='quantitative' />
+      <column caption='Order Year' datatype='integer' name='[order_year]' role='dimension' type='quantitative' />
+      <column caption='Profit Margin Pct' datatype='real' name='[profit_margin_pct]' role='measure' type='quantitative' />
+      <column caption='Segment' datatype='string' name='[segment]' role='dimension' type='nominal' />
+      <column caption='Total Orders' datatype='integer' name='[total_orders]' role='measure' type='quantitative' />
+      <column caption='Total Profit' datatype='real' name='[total_profit]' role='measure' type='quantitative' />
+      <column caption='Total Sales' datatype='real' name='[total_sales]' role='measure' type='quantitative' />
+      <column caption='Unique Customers' datatype='integer' name='[unique_customers]' role='measure' type='quantitative' />
+      <column-instance column='[segment]' derivation='None' name='[none:segment:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:segment:nk]' type='palette'>
+            <map to='#1d9e75'>
+              <bucket>&quot;Corporate&quot;</bucket>
+            </map>
+            <map to='#2e6fbf'>
+              <bucket>&quot;Consumer&quot;</bucket>
+            </map>
+            <map to='#ef9f27'>
+              <bucket>&quot;Home Office&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='agg_segment_performance.csv' id='agg_segment_performance.csv_6DDD9D917232407C9C6BC1C8F107C186'>
+            <properties context=''>
+              <relation connection='textscan.0qhhsjs04swfue1be62dz1398j4e' name='agg_segment_performance.csv' table='[agg_segment_performance#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='segment' ordinal='0' />
+                  <column datatype='integer' name='order_year' ordinal='1' />
+                  <column datatype='real' name='total_sales' ordinal='2' />
+                  <column datatype='real' name='total_profit' ordinal='3' />
+                  <column datatype='integer' name='total_orders' ordinal='4' />
+                  <column datatype='integer' name='unique_customers' ordinal='5' />
+                  <column datatype='real' name='avg_order_value' ordinal='6' />
+                  <column datatype='real' name='profit_margin_pct' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='fact_sales' inline='true' name='federated.1orvg5r154dbgb1gnmr3q1loeqow' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='fact_sales' name='textscan.1bc7ckw0ailv711ggdndg0lbtxx1'>
+            <connection class='textscan' directory='C:/Users/Sang1/Downloads/Superstore-Analytics-Pro/data/dim_fact' filename='fact_sales.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='textscan.1bc7ckw0ailv711ggdndg0lbtxx1' name='fact_sales.csv' table='[fact_sales#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='order_id' ordinal='0' />
+              <column datatype='string' name='customer_id' ordinal='1' />
+              <column datatype='string' name='product_id' ordinal='2' />
+              <column datatype='string' name='location_id' ordinal='3' />
+              <column datatype='date' name='order_date' ordinal='4' />
+              <column datatype='date' name='ship_date' ordinal='5' />
+              <column datatype='string' name='ship_mode' ordinal='6' />
+              <column datatype='string' name='order_priority' ordinal='7' />
+              <column datatype='real' name='sales' ordinal='8' />
+              <column datatype='integer' name='quantity' ordinal='9' />
+              <column datatype='real' name='discount' ordinal='10' />
+              <column datatype='real' name='profit' ordinal='11' />
+              <column datatype='real' name='shipping_cost' ordinal='12' />
+              <column datatype='real' name='profit_margin' ordinal='13' />
+              <column datatype='integer' name='ship_delay_days' ordinal='14' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1bc7ckw0ailv711ggdndg0lbtxx1' name='dim_customer.csv' table='[dim_customer#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='customer_id' ordinal='0' />
+              <column datatype='string' name='customer_name' ordinal='1' />
+              <column datatype='string' name='segment' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1bc7ckw0ailv711ggdndg0lbtxx1' name='dim_location.csv' table='[dim_location#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='location_id' ordinal='0' />
+              <column datatype='string' name='market' ordinal='1' />
+              <column datatype='string' name='region' ordinal='2' />
+              <column datatype='string' name='country' ordinal='3' />
+              <column datatype='string' name='state' ordinal='4' />
+              <column datatype='string' name='city' ordinal='5' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1bc7ckw0ailv711ggdndg0lbtxx1' name='dim_product.csv' table='[dim_product#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='product_id' ordinal='0' />
+              <column datatype='string' name='category' ordinal='1' />
+              <column datatype='string' name='sub_category' ordinal='2' />
+              <column datatype='string' name='product_name' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1bc7ckw0ailv711ggdndg0lbtxx1' name='dim_time.csv' table='[dim_time#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='date' name='date' ordinal='0' />
+              <column datatype='integer' name='year' ordinal='1' />
+              <column datatype='integer' name='quarter' ordinal='2' />
+              <column datatype='integer' name='month' ordinal='3' />
+              <column datatype='string' name='month_name' ordinal='4' />
+              <column datatype='integer' name='day' ordinal='5' />
+              <column datatype='string' name='weekday' ordinal='6' />
+              <column datatype='boolean' name='is_weekend' ordinal='7' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[category]' value='[dim_product.csv].[category]' />
+          <map key='[city]' value='[dim_location.csv].[city]' />
+          <map key='[country]' value='[dim_location.csv].[country]' />
+          <map key='[customer_id (dim_customer.csv)]' value='[dim_customer.csv].[customer_id]' />
+          <map key='[customer_id]' value='[fact_sales.csv].[customer_id]' />
+          <map key='[customer_name]' value='[dim_customer.csv].[customer_name]' />
+          <map key='[date]' value='[dim_time.csv].[date]' />
+          <map key='[day]' value='[dim_time.csv].[day]' />
+          <map key='[discount]' value='[fact_sales.csv].[discount]' />
+          <map key='[is_weekend]' value='[dim_time.csv].[is_weekend]' />
+          <map key='[location_id (dim_location.csv)]' value='[dim_location.csv].[location_id]' />
+          <map key='[location_id]' value='[fact_sales.csv].[location_id]' />
+          <map key='[market]' value='[dim_location.csv].[market]' />
+          <map key='[month]' value='[dim_time.csv].[month]' />
+          <map key='[month_name]' value='[dim_time.csv].[month_name]' />
+          <map key='[order_date]' value='[fact_sales.csv].[order_date]' />
+          <map key='[order_id]' value='[fact_sales.csv].[order_id]' />
+          <map key='[order_priority]' value='[fact_sales.csv].[order_priority]' />
+          <map key='[product_id (dim_product.csv)]' value='[dim_product.csv].[product_id]' />
+          <map key='[product_id]' value='[fact_sales.csv].[product_id]' />
+          <map key='[product_name]' value='[dim_product.csv].[product_name]' />
+          <map key='[profit]' value='[fact_sales.csv].[profit]' />
+          <map key='[profit_margin]' value='[fact_sales.csv].[profit_margin]' />
+          <map key='[quantity]' value='[fact_sales.csv].[quantity]' />
+          <map key='[quarter]' value='[dim_time.csv].[quarter]' />
+          <map key='[region]' value='[dim_location.csv].[region]' />
+          <map key='[sales]' value='[fact_sales.csv].[sales]' />
+          <map key='[segment]' value='[dim_customer.csv].[segment]' />
+          <map key='[ship_date]' value='[fact_sales.csv].[ship_date]' />
+          <map key='[ship_delay_days]' value='[fact_sales.csv].[ship_delay_days]' />
+          <map key='[ship_mode]' value='[fact_sales.csv].[ship_mode]' />
+          <map key='[shipping_cost]' value='[fact_sales.csv].[shipping_cost]' />
+          <map key='[state]' value='[dim_location.csv].[state]' />
+          <map key='[sub_category]' value='[dim_product.csv].[sub_category]' />
+          <map key='[weekday]' value='[dim_time.csv].[weekday]' />
+          <map key='[year]' value='[dim_time.csv].[year]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[fact_sales.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[dim_customer.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[dim_location.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[dim_product.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[dim_time.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[order_id]</local-name>
+            <parent-name>[fact_sales.csv]</parent-name>
+            <remote-alias>order_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>customer_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[customer_id]</local-name>
+            <parent-name>[fact_sales.csv]</parent-name>
+            <remote-alias>customer_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[product_id]</local-name>
+            <parent-name>[fact_sales.csv]</parent-name>
+            <remote-alias>product_id</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>location_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[location_id]</local-name>
+            <parent-name>[fact_sales.csv]</parent-name>
+            <remote-alias>location_id</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[order_date]</local-name>
+            <parent-name>[fact_sales.csv]</parent-name>
+            <remote-alias>order_date</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ship_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[ship_date]</local-name>
+            <parent-name>[fact_sales.csv]</parent-name>
+            <remote-alias>ship_date</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ship_mode</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ship_mode]</local-name>
+            <parent-name>[fact_sales.csv]</parent-name>
+            <remote-alias>ship_mode</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_priority</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[order_priority]</local-name>
+            <parent-name>[fact_sales.csv]</parent-name>
+            <remote-alias>order_priority</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[sales]</local-name>
+            <parent-name>[fact_sales.csv]</parent-name>
+            <remote-alias>sales</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>quantity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[quantity]</local-name>
+            <parent-name>[fact_sales.csv]</parent-name>
+            <remote-alias>quantity</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>discount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[discount]</local-name>
+            <parent-name>[fact_sales.csv]</parent-name>
+            <remote-alias>discount</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>profit</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[profit]</local-name>
+            <parent-name>[fact_sales.csv]</parent-name>
+            <remote-alias>profit</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>shipping_cost</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[shipping_cost]</local-name>
+            <parent-name>[fact_sales.csv]</parent-name>
+            <remote-alias>shipping_cost</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>profit_margin</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[profit_margin]</local-name>
+            <parent-name>[fact_sales.csv]</parent-name>
+            <remote-alias>profit_margin</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ship_delay_days</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ship_delay_days]</local-name>
+            <parent-name>[fact_sales.csv]</parent-name>
+            <remote-alias>ship_delay_days</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>customer_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[customer_id (dim_customer.csv)]</local-name>
+            <parent-name>[dim_customer.csv]</parent-name>
+            <remote-alias>customer_id</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[dim_customer.csv_ED6898C8A15940E8ACA58B4D9B560906]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>customer_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[customer_name]</local-name>
+            <parent-name>[dim_customer.csv]</parent-name>
+            <remote-alias>customer_name</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[dim_customer.csv_ED6898C8A15940E8ACA58B4D9B560906]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>segment</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[segment]</local-name>
+            <parent-name>[dim_customer.csv]</parent-name>
+            <remote-alias>segment</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[dim_customer.csv_ED6898C8A15940E8ACA58B4D9B560906]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>location_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[location_id (dim_location.csv)]</local-name>
+            <parent-name>[dim_location.csv]</parent-name>
+            <remote-alias>location_id</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[dim_location.csv_7F1C54D18A2748549BCCAD840E131630]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>market</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[market]</local-name>
+            <parent-name>[dim_location.csv]</parent-name>
+            <remote-alias>market</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[dim_location.csv_7F1C54D18A2748549BCCAD840E131630]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[region]</local-name>
+            <parent-name>[dim_location.csv]</parent-name>
+            <remote-alias>region</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[dim_location.csv_7F1C54D18A2748549BCCAD840E131630]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[dim_location.csv]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[dim_location.csv_7F1C54D18A2748549BCCAD840E131630]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>state</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[state]</local-name>
+            <parent-name>[dim_location.csv]</parent-name>
+            <remote-alias>state</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[dim_location.csv_7F1C54D18A2748549BCCAD840E131630]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>city</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[city]</local-name>
+            <parent-name>[dim_location.csv]</parent-name>
+            <remote-alias>city</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[dim_location.csv_7F1C54D18A2748549BCCAD840E131630]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[product_id (dim_product.csv)]</local-name>
+            <parent-name>[dim_product.csv]</parent-name>
+            <remote-alias>product_id</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[dim_product.csv_FFB023610209425CB9C16EDB510E8B6A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[category]</local-name>
+            <parent-name>[dim_product.csv]</parent-name>
+            <remote-alias>category</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[dim_product.csv_FFB023610209425CB9C16EDB510E8B6A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sub_category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[sub_category]</local-name>
+            <parent-name>[dim_product.csv]</parent-name>
+            <remote-alias>sub_category</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[dim_product.csv_FFB023610209425CB9C16EDB510E8B6A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[product_name]</local-name>
+            <parent-name>[dim_product.csv]</parent-name>
+            <remote-alias>product_name</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[dim_product.csv_FFB023610209425CB9C16EDB510E8B6A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[dim_time.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dim_time.csv_39ABCAA265B2401086AB54570F51B35C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[dim_time.csv]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dim_time.csv_39ABCAA265B2401086AB54570F51B35C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>quarter</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[quarter]</local-name>
+            <parent-name>[dim_time.csv]</parent-name>
+            <remote-alias>quarter</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dim_time.csv_39ABCAA265B2401086AB54570F51B35C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[month]</local-name>
+            <parent-name>[dim_time.csv]</parent-name>
+            <remote-alias>month</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dim_time.csv_39ABCAA265B2401086AB54570F51B35C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[month_name]</local-name>
+            <parent-name>[dim_time.csv]</parent-name>
+            <remote-alias>month_name</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[dim_time.csv_39ABCAA265B2401086AB54570F51B35C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[day]</local-name>
+            <parent-name>[dim_time.csv]</parent-name>
+            <remote-alias>day</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dim_time.csv_39ABCAA265B2401086AB54570F51B35C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>weekday</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[weekday]</local-name>
+            <parent-name>[dim_time.csv]</parent-name>
+            <remote-alias>weekday</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[dim_time.csv_39ABCAA265B2401086AB54570F51B35C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_weekend</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[is_weekend]</local-name>
+            <parent-name>[dim_time.csv]</parent-name>
+            <remote-alias>is_weekend</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dim_time.csv_39ABCAA265B2401086AB54570F51B35C]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Total Sales' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Calculation_1348878091141120]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([sales])' />
+      </column>
+      <column caption='Total Profit' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Calculation_1348878091341825]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([profit])' />
+      </column>
+      <column caption='Profit Margin %' datatype='real' default-format='p0.0%' name='[Calculation_1348878091419650]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([profit]) / SUM([sales])' />
+      </column>
+      <column caption='Loss Orders' datatype='integer' name='[Calculation_1348878091517955]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD(IF [profit] &lt; 0 THEN [order_id] END)' />
+      </column>
+      <column caption='Loss Rate %' datatype='real' default-format='p0.0%' name='[Calculation_1348878091571204]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IIF([profit] &lt; 0, 1, 0)) / COUNT([order_id]) * 100' />
+      </column>
+      <column caption='Avg Order Value' datatype='real' name='[Calculation_1348878091628549]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([sales]) / COUNTD([order_id])' />
+      </column>
+      <column caption='Shipping Cost Ratio' datatype='real' name='[Calculation_1348878091689990]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([shipping_cost]) / SUM([sales])' />
+      </column>
+      <column caption='Is Loss Maker' datatype='string' name='[Calculation_1348878091751431]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [profit] &lt; 0 THEN &quot;Lỗ&quot; ELSE &quot;Lãi&quot; END' />
+      </column>
+      <column caption='Discount Band' datatype='string' name='[Calculation_1348878091886600]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [discount]=0 THEN &quot;0%&quot; ELSEIF [discount]&lt;=0.1 THEN &quot;0-10%&quot; ELSEIF [discount]&lt;=0.3 THEN &quot;10-30%&quot; ELSEIF [discount]&lt;=0.5 THEN &quot;30-50%&quot; ELSE &quot;50%+&quot; END' />
+      </column>
+      <column caption='Is Loss' datatype='integer' name='[Calculation_1453611206733825]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [profit] &lt; 0 THEN 1 ELSE 0 END' />
+      </column>
+      <column caption='Quarter_Label' datatype='string' name='[Calculation_1453611510333445]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='STR(YEAR([order_date])) + &quot; Q&quot; + STR(DATEPART(&quot;quarter&quot;, [order_date]))' />
+      </column>
+      <column caption='Quarter_Shade' datatype='string' name='[Calculation_1453611511386118]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF DATEPART(&quot;quarter&quot;, [order_date]) = 4 THEN &quot;Q4 Peak&quot;&#13;&#10;ELSE &quot;Normal Quarters&quot;&#13;&#10;END' />
+      </column>
+      <column caption='dim_customer.csv' datatype='table' name='[__tableau_internal_object_id__].[dim_customer.csv_ED6898C8A15940E8ACA58B4D9B560906]' role='measure' type='quantitative' />
+      <column caption='dim_location.csv' datatype='table' name='[__tableau_internal_object_id__].[dim_location.csv_7F1C54D18A2748549BCCAD840E131630]' role='measure' type='quantitative' />
+      <column caption='dim_product.csv' datatype='table' name='[__tableau_internal_object_id__].[dim_product.csv_FFB023610209425CB9C16EDB510E8B6A]' role='measure' type='quantitative' />
+      <column caption='dim_time.csv' datatype='table' name='[__tableau_internal_object_id__].[dim_time.csv_39ABCAA265B2401086AB54570F51B35C]' role='measure' type='quantitative' />
+      <column caption='fact_sales.csv' datatype='table' name='[__tableau_internal_object_id__].[fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA]' role='measure' type='quantitative' />
+      <column caption='Category' datatype='string' name='[category]' role='dimension' type='nominal' />
+      <column caption='City' datatype='string' name='[city]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Customer Id (Dim Customer.Csv)' datatype='string' name='[customer_id (dim_customer.csv)]' role='dimension' type='nominal' />
+      <column caption='Customer Id' datatype='string' name='[customer_id]' role='dimension' type='nominal' />
+      <column caption='Customer Name' datatype='string' name='[customer_name]' role='dimension' type='nominal' />
+      <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+      <column caption='Day' datatype='integer' name='[day]' role='dimension' type='quantitative' />
+      <column caption='Discount' datatype='real' name='[discount]' role='measure' type='quantitative' />
+      <column caption='Is Weekend' datatype='boolean' name='[is_weekend]' role='dimension' type='nominal' />
+      <column caption='Location Id (Dim Location.Csv)' datatype='string' name='[location_id (dim_location.csv)]' role='dimension' type='nominal' />
+      <column caption='Location Id' datatype='string' name='[location_id]' role='dimension' type='nominal' />
+      <column caption='Market' datatype='string' name='[market]' role='dimension' type='nominal' />
+      <column caption='Month' datatype='integer' name='[month]' role='dimension' type='quantitative' />
+      <column caption='Month Name' datatype='string' name='[month_name]' role='dimension' type='nominal' />
+      <column caption='Order Date' datatype='date' name='[order_date]' role='dimension' type='ordinal' />
+      <column caption='Order Id' datatype='string' name='[order_id]' role='dimension' type='nominal' />
+      <column caption='Order Priority' datatype='string' name='[order_priority]' role='dimension' type='nominal' />
+      <column caption='Product Id (Dim Product.Csv)' datatype='string' name='[product_id (dim_product.csv)]' role='dimension' type='nominal' />
+      <column caption='Product Id' datatype='string' name='[product_id]' role='dimension' type='nominal' />
+      <column caption='Product Name' datatype='string' name='[product_name]' role='dimension' type='nominal' />
+      <column caption='Profit' datatype='real' name='[profit]' role='measure' type='quantitative' />
+      <column caption='Profit Margin' datatype='real' name='[profit_margin]' role='measure' type='quantitative' />
+      <column caption='Quantity' datatype='integer' name='[quantity]' role='measure' type='quantitative' />
+      <column caption='Quarter' datatype='integer' name='[quarter]' role='dimension' type='quantitative' />
+      <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+      <column caption='Sales' datatype='real' name='[sales]' role='measure' type='quantitative' />
+      <column caption='Segment' datatype='string' name='[segment]' role='dimension' type='nominal' />
+      <column caption='Ship Date' datatype='date' name='[ship_date]' role='dimension' type='ordinal' />
+      <column caption='Ship Delay Days' datatype='integer' name='[ship_delay_days]' role='measure' type='quantitative' />
+      <column caption='Ship Mode' datatype='string' name='[ship_mode]' role='dimension' type='nominal' />
+      <column caption='Shipping Cost' datatype='real' name='[shipping_cost]' role='measure' type='quantitative' />
+      <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Sub Category' datatype='string' name='[sub_category]' role='dimension' type='nominal' />
+      <column caption='Weekday' datatype='string' name='[weekday]' role='dimension' type='nominal' />
+      <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+      <column-instance column='[Calculation_1453611511386118]' derivation='None' name='[none:Calculation_1453611511386118:nk]' pivot='key' type='nominal' />
+      <column-instance column='[order_date]' derivation='Quarter' name='[qr:order_date:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[sales]' derivation='Sum' name='[sum:sales:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[order_date]' derivation='Year' name='[yr:order_date:ok]' pivot='key' type='ordinal' />
+      <drill-paths>
+        <drill-path name='country, state, city' />
+      </drill-paths>
+      <layout common-percentage='0.773788' dim-ordering='alphabetic' measure-ordering='alphabetic' parameter-percentage='0.226212' show-structure='true' user-set-layout-v2='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1orvg5r154dbgb1gnmr3q1loeqow]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1orvg5r154dbgb1gnmr3q1loeqow].[sum:sales:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[yr:order_date:ok]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>2011</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>2014</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>2013</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>2012</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[qr:order_date:ok]' palette='blue_10_0' type='palette'>
+            <map to='#2a5783'>
+              <bucket>4</bucket>
+            </map>
+            <map to='#5081ae'>
+              <bucket>3</bucket>
+            </map>
+            <map to='#7eaed3'>
+              <bucket>2</bucket>
+            </map>
+            <map to='#b9ddf1'>
+              <bucket>1</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_1453611511386118:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;\#85B7EB&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Q4 Peak&quot;</bucket>
+            </map>
+            <map to='#d0d7de'>
+              <bucket>&quot;Normal Quarters&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;\#B5D4F4&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;\#185FA5&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='dim_customer.csv' id='dim_customer.csv_ED6898C8A15940E8ACA58B4D9B560906'>
+            <properties context=''>
+              <relation connection='textscan.1bc7ckw0ailv711ggdndg0lbtxx1' name='dim_customer.csv' table='[dim_customer#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='customer_id' ordinal='0' />
+                  <column datatype='string' name='customer_name' ordinal='1' />
+                  <column datatype='string' name='segment' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='dim_location.csv' id='dim_location.csv_7F1C54D18A2748549BCCAD840E131630'>
+            <properties context=''>
+              <relation connection='textscan.1bc7ckw0ailv711ggdndg0lbtxx1' name='dim_location.csv' table='[dim_location#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='location_id' ordinal='0' />
+                  <column datatype='string' name='market' ordinal='1' />
+                  <column datatype='string' name='region' ordinal='2' />
+                  <column datatype='string' name='country' ordinal='3' />
+                  <column datatype='string' name='state' ordinal='4' />
+                  <column datatype='string' name='city' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='dim_product.csv' id='dim_product.csv_FFB023610209425CB9C16EDB510E8B6A'>
+            <properties context=''>
+              <relation connection='textscan.1bc7ckw0ailv711ggdndg0lbtxx1' name='dim_product.csv' table='[dim_product#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='product_id' ordinal='0' />
+                  <column datatype='string' name='category' ordinal='1' />
+                  <column datatype='string' name='sub_category' ordinal='2' />
+                  <column datatype='string' name='product_name' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='dim_time.csv' id='dim_time.csv_39ABCAA265B2401086AB54570F51B35C'>
+            <properties context=''>
+              <relation connection='textscan.1bc7ckw0ailv711ggdndg0lbtxx1' name='dim_time.csv' table='[dim_time#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='date' name='date' ordinal='0' />
+                  <column datatype='integer' name='year' ordinal='1' />
+                  <column datatype='integer' name='quarter' ordinal='2' />
+                  <column datatype='integer' name='month' ordinal='3' />
+                  <column datatype='string' name='month_name' ordinal='4' />
+                  <column datatype='integer' name='day' ordinal='5' />
+                  <column datatype='string' name='weekday' ordinal='6' />
+                  <column datatype='boolean' name='is_weekend' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='fact_sales.csv' id='fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA'>
+            <properties context=''>
+              <relation connection='textscan.1bc7ckw0ailv711ggdndg0lbtxx1' name='fact_sales.csv' table='[fact_sales#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='order_id' ordinal='0' />
+                  <column datatype='string' name='customer_id' ordinal='1' />
+                  <column datatype='string' name='product_id' ordinal='2' />
+                  <column datatype='string' name='location_id' ordinal='3' />
+                  <column datatype='date' name='order_date' ordinal='4' />
+                  <column datatype='date' name='ship_date' ordinal='5' />
+                  <column datatype='string' name='ship_mode' ordinal='6' />
+                  <column datatype='string' name='order_priority' ordinal='7' />
+                  <column datatype='real' name='sales' ordinal='8' />
+                  <column datatype='integer' name='quantity' ordinal='9' />
+                  <column datatype='real' name='discount' ordinal='10' />
+                  <column datatype='real' name='profit' ordinal='11' />
+                  <column datatype='real' name='shipping_cost' ordinal='12' />
+                  <column datatype='real' name='profit_margin' ordinal='13' />
+                  <column datatype='integer' name='ship_delay_days' ordinal='14' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[customer_id]' />
+              <expression op='[customer_id (dim_customer.csv)]' />
+            </expression>
+            <first-end-point object-id='fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA' />
+            <second-end-point object-id='dim_customer.csv_ED6898C8A15940E8ACA58B4D9B560906' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[location_id]' />
+              <expression op='[location_id (dim_location.csv)]' />
+            </expression>
+            <first-end-point object-id='fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA' />
+            <second-end-point object-id='dim_location.csv_7F1C54D18A2748549BCCAD840E131630' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[product_id]' />
+              <expression op='[product_id (dim_product.csv)]' />
+            </expression>
+            <first-end-point object-id='fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA' />
+            <second-end-point object-id='dim_product.csv_FFB023610209425CB9C16EDB510E8B6A' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[order_date]' />
+              <expression op='[date]' />
+            </expression>
+            <first-end-point object-id='fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA' />
+            <second-end-point object-id='dim_time.csv_39ABCAA265B2401086AB54570F51B35C' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+    <datasource caption='YoY Growth' inline='true' name='federated.1agvfpk1hwbjh5181ow740ggdc48' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='agg_yoy_growth' name='textscan.1vobrhd11pdu4l1427a6o01l22t4'>
+            <connection class='textscan' directory='C:/Users/Sang1/Downloads/Superstore-Analytics-Pro/data/aggregates' filename='agg_yoy_growth.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1vobrhd11pdu4l1427a6o01l22t4' name='agg_yoy_growth.csv' table='[agg_yoy_growth#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='order_year' ordinal='0' />
+            <column datatype='string' name='market' ordinal='1' />
+            <column datatype='real' name='total_sales' ordinal='2' />
+            <column datatype='real' name='total_profit' ordinal='3' />
+            <column datatype='integer' name='total_orders' ordinal='4' />
+            <column datatype='integer' name='unique_customers' ordinal='5' />
+            <column datatype='real' name='sales_growth_pct' ordinal='6' />
+            <column datatype='real' name='profit_growth_pct' ordinal='7' />
+            <column datatype='real' name='profit_margin_pct' ordinal='8' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[agg_yoy_growth.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[order_year]</local-name>
+            <parent-name>[agg_yoy_growth.csv]</parent-name>
+            <remote-alias>order_year</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_yoy_growth.csv_DBD9C43BDA164BF09B0D0C0896E32635]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>market</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[market]</local-name>
+            <parent-name>[agg_yoy_growth.csv]</parent-name>
+            <remote-alias>market</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[agg_yoy_growth.csv_DBD9C43BDA164BF09B0D0C0896E32635]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_sales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_sales]</local-name>
+            <parent-name>[agg_yoy_growth.csv]</parent-name>
+            <remote-alias>total_sales</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_yoy_growth.csv_DBD9C43BDA164BF09B0D0C0896E32635]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_profit</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_profit]</local-name>
+            <parent-name>[agg_yoy_growth.csv]</parent-name>
+            <remote-alias>total_profit</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_yoy_growth.csv_DBD9C43BDA164BF09B0D0C0896E32635]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_orders]</local-name>
+            <parent-name>[agg_yoy_growth.csv]</parent-name>
+            <remote-alias>total_orders</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_yoy_growth.csv_DBD9C43BDA164BF09B0D0C0896E32635]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unique_customers</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[unique_customers]</local-name>
+            <parent-name>[agg_yoy_growth.csv]</parent-name>
+            <remote-alias>unique_customers</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_yoy_growth.csv_DBD9C43BDA164BF09B0D0C0896E32635]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sales_growth_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[sales_growth_pct]</local-name>
+            <parent-name>[agg_yoy_growth.csv]</parent-name>
+            <remote-alias>sales_growth_pct</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_yoy_growth.csv_DBD9C43BDA164BF09B0D0C0896E32635]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>profit_growth_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[profit_growth_pct]</local-name>
+            <parent-name>[agg_yoy_growth.csv]</parent-name>
+            <remote-alias>profit_growth_pct</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_yoy_growth.csv_DBD9C43BDA164BF09B0D0C0896E32635]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>profit_margin_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[profit_margin_pct]</local-name>
+            <parent-name>[agg_yoy_growth.csv]</parent-name>
+            <remote-alias>profit_margin_pct</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_yoy_growth.csv_DBD9C43BDA164BF09B0D0C0896E32635]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='YoY Sales %' datatype='real' name='[Calculation_1231786855903234]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(SUM([total_sales]) - LOOKUP(SUM([total_sales]), -1)) &#13;&#10;/ LOOKUP(SUM([total_sales]), -1)'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='YoY Label' datatype='string' name='[Calculation_1231786857185284]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='IF [Calculation_1231786855903234] &gt; 0 THEN&#13;&#10;&quot;▲ &quot; + STR(ROUND([Calculation_1231786855903234]*100,1)) + &quot;%&quot;&#13;&#10;ELSE&#13;&#10;&quot;▼ &quot; + STR(ROUND([Calculation_1231786855903234]*100,1)) + &quot;%&quot;&#13;&#10;END'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Calculation1' datatype='boolean' name='[Calculation_1231786858086405]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='INDEX() = 1'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Profit Margin %' datatype='real' name='[Calculation_1453611205611520]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([total_profit]) / SUM([total_sales])' />
+      </column>
+      <column caption='agg_yoy_growth.csv' datatype='table' name='[__tableau_internal_object_id__].[agg_yoy_growth.csv_DBD9C43BDA164BF09B0D0C0896E32635]' role='measure' type='quantitative' />
+      <column caption='Market' datatype='string' name='[market]' role='dimension' type='nominal' />
+      <column caption='Order Year' datatype='integer' name='[order_year]' role='dimension' type='quantitative' />
+      <column caption='Profit Growth Pct' datatype='real' name='[profit_growth_pct]' role='measure' type='quantitative' />
+      <column caption='Profit Margin Pct' datatype='real' name='[profit_margin_pct]' role='measure' type='quantitative' />
+      <column caption='Sales Growth Pct' datatype='real' name='[sales_growth_pct]' role='measure' type='quantitative' />
+      <column caption='Total Orders' datatype='integer' name='[total_orders]' role='measure' type='quantitative' />
+      <column caption='Total Profit' datatype='real' name='[total_profit]' role='measure' type='quantitative' />
+      <column caption='Total Sales' datatype='real' name='[total_sales]' role='measure' type='quantitative' />
+      <column caption='Unique Customers' datatype='integer' name='[unique_customers]' role='measure' type='quantitative' />
+      <column-instance column='[total_sales]' derivation='Sum' name='[pcdf:sum:total_sales:qk:2]' pivot='key' type='quantitative'>
+        <table-calc diff-options='Relative' ordering-type='CellInPane' type='PctDiff'>
+          <address>
+            <value>-1</value>
+          </address>
+        </table-calc>
+      </column-instance>
+      <column-instance column='[total_sales]' derivation='Sum' name='[pcdf:sum:total_sales:qk]' pivot='key' type='quantitative'>
+        <table-calc diff-options='Relative' ordering-type='Rows' type='PctDiff'>
+          <address>
+            <value>-1</value>
+          </address>
+        </table-calc>
+      </column-instance>
+      <column-instance column='[total_profit]' derivation='Sum' name='[sum:total_profit:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[total_sales]' derivation='Sum' name='[sum:total_sales:qk]' pivot='key' type='quantitative' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#1d9e75'>
+              <bucket>&quot;[federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_profit:qk]&quot;</bucket>
+            </map>
+            <map to='#1d9e75'>
+              <bucket>&quot;[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_1348878091341825:qk]&quot;</bucket>
+            </map>
+            <map to='#2e6fbf'>
+              <bucket>&quot;[federated.1agvfpk1hwbjh5181ow740ggdc48].[pcdf:sum:total_sales:qk:2]&quot;</bucket>
+            </map>
+            <map to='#2e6fbf'>
+              <bucket>&quot;[federated.1agvfpk1hwbjh5181ow740ggdc48].[pcdf:sum:total_sales:qk]&quot;</bucket>
+            </map>
+            <map to='#2e6fbf'>
+              <bucket>&quot;[federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_sales:qk]&quot;</bucket>
+            </map>
+            <map to='#2e6fbf'>
+              <bucket>&quot;[federated.1agvfpk1hwbjh5181ow740ggdc48].[usr:Calculation1:qk]&quot;</bucket>
+            </map>
+            <map to='#2e6fbf'>
+              <bucket>&quot;[federated.1agvfpk1hwbjh5181ow740ggdc48].[usr:Calculation2:qk]&quot;</bucket>
+            </map>
+            <map to='#2e6fbf'>
+              <bucket>&quot;[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_1348878091141120:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1a7agj317ep6b410grb7r0qag6po].[usr:Calculation_1453611481161730:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1orvg5r154dbgb1gnmr3q1loeqow].[sum:sales:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1agvfpk1hwbjh5181ow740ggdc48]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='federated.1a7agj317ep6b410grb7r0qag6po'>
+        <column caption='Margin % (Safe)' datatype='real' name='[Calculation_1453611481161730]' role='measure' type='quantitative'>
+          <calculation class='tableau' formula='SUM([total_profit]) / SUM([total_sales]) * 100' />
+        </column>
+        <column-instance column='[Calculation_1453611481161730]' derivation='User' name='[usr:Calculation_1453611481161730:qk]' pivot='key' type='quantitative' />
+      </datasource-dependencies>
+      <datasource-dependencies datasource='federated.1orvg5r154dbgb1gnmr3q1loeqow'>
+        <column caption='Sales' datatype='real' name='[sales]' role='measure' type='quantitative' />
+        <column-instance column='[sales]' derivation='Sum' name='[sum:sales:qk]' pivot='key' type='quantitative' />
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='agg_yoy_growth.csv' id='agg_yoy_growth.csv_DBD9C43BDA164BF09B0D0C0896E32635'>
+            <properties context=''>
+              <relation connection='textscan.1vobrhd11pdu4l1427a6o01l22t4' name='agg_yoy_growth.csv' table='[agg_yoy_growth#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='order_year' ordinal='0' />
+                  <column datatype='string' name='market' ordinal='1' />
+                  <column datatype='real' name='total_sales' ordinal='2' />
+                  <column datatype='real' name='total_profit' ordinal='3' />
+                  <column datatype='integer' name='total_orders' ordinal='4' />
+                  <column datatype='integer' name='unique_customers' ordinal='5' />
+                  <column datatype='real' name='sales_growth_pct' ordinal='6' />
+                  <column datatype='real' name='profit_growth_pct' ordinal='7' />
+                  <column datatype='real' name='profit_margin_pct' ordinal='8' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <shared-views>
+    <shared-view name='federated.0a2kk1f0dp5y251aca3eq0xk1tqp'>
+      <datasources>
+        <datasource caption='Segment Performance' name='federated.0a2kk1f0dp5y251aca3eq0xk1tqp' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0a2kk1f0dp5y251aca3eq0xk1tqp'>
+        <column-instance column='[order_year]' derivation='None' name='[none:order_year:ok]' pivot='key' type='ordinal' />
+        <column-instance column='[segment]' derivation='None' name='[none:segment:nk]' pivot='key' type='nominal' />
+        <column caption='Order Year' datatype='integer' name='[order_year]' role='dimension' type='quantitative' />
+        <column caption='Segment' datatype='string' name='[segment]' role='dimension' type='nominal' />
+      </datasource-dependencies>
+      <datasource-dependencies datasource='federated.1agvfpk1hwbjh5181ow740ggdc48'>
+        <column-instance column='[order_year]' derivation='None' name='[none:order_year:ok]' pivot='key' type='ordinal' />
+        <column caption='Order Year' datatype='integer' name='[order_year]' role='dimension' type='quantitative' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.0a2kk1f0dp5y251aca3eq0xk1tqp].[none:segment:nk]'>
+        <groupfilter function='level-members' level='[none:segment:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+      </filter>
+      <filter class='categorical' column='[federated.1agvfpk1hwbjh5181ow740ggdc48].[none:order_year:ok]'>
+        <groupfilter function='level-members' level='[none:order_year:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+        <target field='[federated.0a2kk1f0dp5y251aca3eq0xk1tqp].[none:order_year:ok]' />
+      </filter>
+    </shared-view>
+    <shared-view name='federated.1a7agj317ep6b410grb7r0qag6po'>
+      <datasources>
+        <datasource caption='Market Performance' name='federated.1a7agj317ep6b410grb7r0qag6po' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1a7agj317ep6b410grb7r0qag6po'>
+        <column-instance column='[order_year]' derivation='None' name='[none:order_year:ok]' pivot='key' type='ordinal' />
+        <column caption='Order Year' datatype='integer' name='[order_year]' role='dimension' type='quantitative' />
+      </datasource-dependencies>
+      <datasource-dependencies datasource='federated.1agvfpk1hwbjh5181ow740ggdc48'>
+        <column-instance column='[order_year]' derivation='None' name='[none:order_year:ok]' pivot='key' type='ordinal' />
+        <column caption='Order Year' datatype='integer' name='[order_year]' role='dimension' type='quantitative' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.1agvfpk1hwbjh5181ow740ggdc48].[none:order_year:ok]'>
+        <groupfilter function='level-members' level='[none:order_year:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+        <target field='[federated.1a7agj317ep6b410grb7r0qag6po].[none:order_year:ok]' />
+      </filter>
+    </shared-view>
+    <shared-view name='federated.1agvfpk1hwbjh5181ow740ggdc48'>
+      <datasources>
+        <datasource caption='YoY Growth' name='federated.1agvfpk1hwbjh5181ow740ggdc48' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1agvfpk1hwbjh5181ow740ggdc48'>
+        <column-instance column='[order_year]' derivation='None' name='[none:order_year:ok]' pivot='key' type='ordinal' />
+        <column caption='Order Year' datatype='integer' name='[order_year]' role='dimension' type='quantitative' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.1agvfpk1hwbjh5181ow740ggdc48].[none:order_year:ok]'>
+        <groupfilter function='level-members' level='[none:order_year:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+        <target field='[federated.1agvfpk1hwbjh5181ow740ggdc48].[none:order_year:ok]' />
+      </filter>
+    </shared-view>
+  </shared-views>
+  <worksheets>
+    <worksheet name='Market_Bar'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Market Performance' name='federated.1a7agj317ep6b410grb7r0qag6po' />
+            <datasource caption='YoY Growth' name='federated.1agvfpk1hwbjh5181ow740ggdc48' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1a7agj317ep6b410grb7r0qag6po'>
+            <column caption='Margin % (Safe)' datatype='real' name='[Calculation_1453611481161730]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([total_profit]) / SUM([total_sales]) * 100' />
+            </column>
+            <column caption='Margin_Safe_Pct' datatype='real' name='[Calculation_1453611508727811]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([total_profit]) / SUM([total_sales]) * 100' />
+            </column>
+            <column caption='Market Color' datatype='string' name='[Calculation_1453611509055492]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='IF [Calculation_1453611508727811] &gt;= 12 THEN &quot;Good&quot;&#13;&#10;ELSEIF [Calculation_1453611508727811] &gt;= 8 THEN &quot;Warning&quot;&#13;&#10;ELSE &quot;Critical&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Market' datatype='string' name='[market]' role='dimension' type='nominal' />
+            <column-instance column='[market]' derivation='None' name='[none:market:nk]' pivot='key' type='nominal' />
+            <column-instance column='[order_year]' derivation='None' name='[none:order_year:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[order_year]' derivation='None' name='[none:order_year:qk]' pivot='key' type='quantitative' />
+            <column caption='Order Year' datatype='integer' name='[order_year]' role='dimension' type='quantitative' />
+            <column caption='Total Profit' datatype='real' name='[total_profit]' role='measure' type='quantitative' />
+            <column caption='Total Sales' datatype='real' name='[total_sales]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_1453611481161730]' derivation='User' name='[usr:Calculation_1453611481161730:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1453611508727811]' derivation='User' name='[usr:Calculation_1453611508727811:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1453611509055492]' derivation='User' name='[usr:Calculation_1453611509055492:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1agvfpk1hwbjh5181ow740ggdc48'>
+            <column-instance column='[order_year]' derivation='None' name='[none:order_year:ok]' pivot='key' type='ordinal' />
+            <column caption='Order Year' datatype='integer' name='[order_year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.1a7agj317ep6b410grb7r0qag6po].[none:market:nk]' direction='DESC' using='[federated.1a7agj317ep6b410grb7r0qag6po].[usr:Calculation_1453611481161730:qk]' />
+          <filter class='quantitative' column='[federated.1a7agj317ep6b410grb7r0qag6po].[none:order_year:qk]' included-values='in-range'>
+            <min>2011</min>
+            <max>2014</max>
+          </filter>
+          <slices>
+            <column>[federated.1a7agj317ep6b410grb7r0qag6po].[none:order_year:qk]</column>
+            <column>[federated.1agvfpk1hwbjh5181ow740ggdc48].[none:order_year:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.1a7agj317ep6b410grb7r0qag6po].[usr:Calculation_1453611508727811:qk]' scope='cols' value='false' />
+            <encoding attr='space' class='0' field='[federated.1a7agj317ep6b410grb7r0qag6po].[usr:Calculation_1453611508727811:qk]' field-type='quantitative' max='30.408271390267288' min='-2.9685910971071485' range-type='fixed' scope='cols' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.1a7agj317ep6b410grb7r0qag6po].[none:market:nk]' value='48' />
+            <format attr='text-format' field='[federated.1a7agj317ep6b410grb7r0qag6po].[usr:Calculation_1453611508727811:qk]' value='n#,##0.0&quot;%&quot;;-#,##0.0&quot;%&quot;' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.1a7agj317ep6b410grb7r0qag6po].[usr:Calculation_1453611509055492:nk]' value=''>
+              <formatted-text />
+            </format>
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.1a7agj317ep6b410grb7r0qag6po].[none:market:nk]' value='Market'>
+              <formatted-text>
+                <run bold='true' fontcolor='#ffffff' fontname='Arial' fontsize='10'>Market</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <lod column='[federated.1a7agj317ep6b410grb7r0qag6po].[none:market:nk]' />
+              <color column='[federated.1a7agj317ep6b410grb7r0qag6po].[usr:Calculation_1453611509055492:nk]' />
+              <text column='[federated.1a7agj317ep6b410grb7r0qag6po].[usr:Calculation_1453611508727811:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1a7agj317ep6b410grb7r0qag6po].[none:market:nk]</rows>
+        <cols>[federated.1a7agj317ep6b410grb7r0qag6po].[usr:Calculation_1453611508727811:qk]</cols>
+      </table>
+      <simple-id uuid='{F0DBA402-BB44-4F74-AB7D-CD637278D730}' />
+    </worksheet>
+    <worksheet name='Quarterly_Revenue'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='fact_sales' name='federated.1orvg5r154dbgb1gnmr3q1loeqow' />
+            <datasource caption='YoY Growth' name='federated.1agvfpk1hwbjh5181ow740ggdc48' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1agvfpk1hwbjh5181ow740ggdc48'>
+            <column-instance column='[order_year]' derivation='None' name='[none:order_year:qk]' pivot='key' type='quantitative' />
+            <column caption='Order Year' datatype='integer' name='[order_year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1orvg5r154dbgb1gnmr3q1loeqow'>
+            <column caption='Quarter_Shade' datatype='string' name='[Calculation_1453611511386118]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF DATEPART(&quot;quarter&quot;, [order_date]) = 4 THEN &quot;Q4 Peak&quot;&#13;&#10;ELSE &quot;Normal Quarters&quot;&#13;&#10;END' />
+            </column>
+            <column-instance column='[Calculation_1453611511386118]' derivation='None' name='[none:Calculation_1453611511386118:nk]' pivot='key' type='nominal' />
+            <column caption='Order Date' datatype='date' name='[order_date]' role='dimension' type='ordinal' />
+            <column-instance column='[order_date]' derivation='Quarter' name='[qr:order_date:ok]' pivot='key' type='ordinal' />
+            <column caption='Sales' datatype='real' name='[sales]' role='measure' type='quantitative' />
+            <column-instance column='[sales]' derivation='Sum' name='[sum:sales:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[order_date]' derivation='Year' name='[yr:order_date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1agvfpk1hwbjh5181ow740ggdc48].[none:order_year:qk]' included-values='in-range'>
+            <min>2011</min>
+            <max>2014</max>
+          </filter>
+          <slices>
+            <column>[federated.1agvfpk1hwbjh5181ow740ggdc48].[none:order_year:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.1orvg5r154dbgb1gnmr3q1loeqow].[sum:sales:qk]' scope='rows' value='false' />
+            <format attr='tick-color' scope='cols' value='#00000000' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1orvg5r154dbgb1gnmr3q1loeqow].[qr:order_date:ok]' value='42' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' scope='rows' value='0' />
+            <format attr='border-style' data-class='total' scope='rows' value='none' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='fill-color' id='annotation_2' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1orvg5r154dbgb1gnmr3q1loeqow].[none:Calculation_1453611511386118:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.5602209568023682' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1orvg5r154dbgb1gnmr3q1loeqow].[sum:sales:qk]</rows>
+        <cols>([federated.1orvg5r154dbgb1gnmr3q1loeqow].[yr:order_date:ok] / [federated.1orvg5r154dbgb1gnmr3q1loeqow].[qr:order_date:ok])</cols>
+        <annotations>
+          <annotation class='point' id='1' mark-position='1' pullback='12' text-width='70'>
+            <formatted-text>
+              <run>Æ&#10;</run>
+              <run bold='true'>Q4 Peak</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.1orvg5r154dbgb1gnmr3q1loeqow].[yr:order_date:ok]</field>
+                        <field>[federated.1orvg5r154dbgb1gnmr3q1loeqow].[qr:order_date:ok]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.1orvg5r154dbgb1gnmr3q1loeqow].[sum:sales:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.1orvg5r154dbgb1gnmr3q1loeqow].[qr:order_date:ok]</field>
+                      <field>[federated.1orvg5r154dbgb1gnmr3q1loeqow].[sum:sales:qk]</field>
+                      <field>[federated.1orvg5r154dbgb1gnmr3q1loeqow].[yr:order_date:ok]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>4</value>
+                    <value>1479732.0</value>
+                    <value>2014</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-16' y='-2' />
+          </annotation>
+          <annotation class='point' id='2' mark-position='1' pullback='12' text-width='83'>
+            <formatted-text>
+              <run bold='true'>Q4 Peak</run>
+              <run>Æ&#10;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.1orvg5r154dbgb1gnmr3q1loeqow].[yr:order_date:ok]</field>
+                        <field>[federated.1orvg5r154dbgb1gnmr3q1loeqow].[qr:order_date:ok]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.1orvg5r154dbgb1gnmr3q1loeqow].[sum:sales:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.1orvg5r154dbgb1gnmr3q1loeqow].[none:Calculation_1453611511386118:nk]</field>
+                      <field>[federated.1orvg5r154dbgb1gnmr3q1loeqow].[qr:order_date:ok]</field>
+                      <field>[federated.1orvg5r154dbgb1gnmr3q1loeqow].[sum:sales:qk]</field>
+                      <field>[federated.1orvg5r154dbgb1gnmr3q1loeqow].[yr:order_date:ok]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Q4 Peak&quot;</value>
+                    <value>4</value>
+                    <value>1479732.0</value>
+                    <value>2014</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-62' y='4' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{2346AA01-E8FF-470E-81BB-45DC29E1A761}' />
+    </worksheet>
+    <worksheet name='S1_Revenue'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#ffffff' fontsize='10'>Doanh thu</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='YoY Growth' name='federated.1agvfpk1hwbjh5181ow740ggdc48' />
+            <datasource caption='Market Performance' name='federated.1a7agj317ep6b410grb7r0qag6po' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1a7agj317ep6b410grb7r0qag6po'>
+            <column caption='Market' datatype='string' name='[market]' role='dimension' type='nominal' />
+            <column-instance column='[market]' derivation='None' name='[none:market:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1agvfpk1hwbjh5181ow740ggdc48'>
+            <column caption='Market' datatype='string' name='[market]' role='dimension' type='nominal' />
+            <column-instance column='[market]' derivation='None' name='[none:market:nk]' pivot='key' type='nominal' />
+            <column-instance column='[order_year]' derivation='None' name='[none:order_year:ok]' pivot='key' type='ordinal' />
+            <column caption='Order Year' datatype='integer' name='[order_year]' role='dimension' type='quantitative' />
+            <column-instance column='[total_sales]' derivation='Sum' name='[sum:total_sales:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Sales' datatype='real' name='[total_sales]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1a7agj317ep6b410grb7r0qag6po].[none:market:nk]'>
+            <groupfilter function='level-members' level='[none:market:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1agvfpk1hwbjh5181ow740ggdc48].[none:market:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:market:nk]' member='&quot;Africa&quot;' />
+              <groupfilter function='member' level='[none:market:nk]' member='&quot;APAC&quot;' />
+              <groupfilter function='member' level='[none:market:nk]' member='&quot;Canada&quot;' />
+              <groupfilter function='member' level='[none:market:nk]' member='&quot;EMEA&quot;' />
+              <groupfilter function='member' level='[none:market:nk]' member='&quot;EU&quot;' />
+              <groupfilter function='member' level='[none:market:nk]' member='&quot;LATAM&quot;' />
+              <groupfilter function='member' level='[none:market:nk]' member='&quot;US&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1agvfpk1hwbjh5181ow740ggdc48].[none:market:nk]</column>
+            <column>[federated.1agvfpk1hwbjh5181ow740ggdc48].[none:order_year:ok]</column>
+            <column>[federated.1a7agj317ep6b410grb7r0qag6po].[none:market:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='493' />
+            <format attr='text-format' field='[federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_sales:qk]' value='c&quot;$&quot;#,##0,,M;(&quot;$&quot;#,##0,,M)' />
+            <format attr='text-align' value='center' />
+            <format attr='vertical-align' value='auto' />
+            <format attr='height' value='99' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.1agvfpk1hwbjh5181ow740ggdc48].[none:order_year:ok]' value='Year'>
+              <formatted-text>
+                <run fontcolor='#ffffff' fontname='Arial' fontsize='10'>Year</run>
+              </formatted-text>
+            </format>
+            <format attr='title' field='[federated.1a7agj317ep6b410grb7r0qag6po].[none:market:nk]' value='Market'>
+              <formatted-text>
+                <run bold='true' fontcolor='#ffffff' fontname='Arial' fontsize='10'>Market</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_sales:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontname='Benton Sans Book' fontsize='12'>Doanh thu</run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#1b3a5c' fontname='Arial' fontsize='32'><![CDATA[<[federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_sales:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{785D7A06-8ABD-42AF-B5D3-0A60507B245F}' />
+    </worksheet>
+    <worksheet name='S2_Profit'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='YoY Growth' name='federated.1agvfpk1hwbjh5181ow740ggdc48' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1agvfpk1hwbjh5181ow740ggdc48'>
+            <column caption='Market' datatype='string' name='[market]' role='dimension' type='nominal' />
+            <column-instance column='[market]' derivation='None' name='[none:market:nk]' pivot='key' type='nominal' />
+            <column-instance column='[order_year]' derivation='None' name='[none:order_year:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[order_year]' derivation='None' name='[none:order_year:qk]' pivot='key' type='quantitative' />
+            <column caption='Order Year' datatype='integer' name='[order_year]' role='dimension' type='quantitative' />
+            <column-instance column='[total_profit]' derivation='Sum' name='[sum:total_profit:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Profit' datatype='real' name='[total_profit]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1agvfpk1hwbjh5181ow740ggdc48].[none:market:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:market:nk]' member='&quot;Africa&quot;' />
+              <groupfilter function='member' level='[none:market:nk]' member='&quot;APAC&quot;' />
+              <groupfilter function='member' level='[none:market:nk]' member='&quot;Canada&quot;' />
+              <groupfilter function='member' level='[none:market:nk]' member='&quot;EMEA&quot;' />
+              <groupfilter function='member' level='[none:market:nk]' member='&quot;EU&quot;' />
+              <groupfilter function='member' level='[none:market:nk]' member='&quot;LATAM&quot;' />
+              <groupfilter function='member' level='[none:market:nk]' member='&quot;US&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.1agvfpk1hwbjh5181ow740ggdc48].[none:order_year:qk]' included-values='in-range'>
+            <min>2011</min>
+            <max>2014</max>
+          </filter>
+          <slices>
+            <column>[federated.1agvfpk1hwbjh5181ow740ggdc48].[none:market:nk]</column>
+            <column>[federated.1agvfpk1hwbjh5181ow740ggdc48].[none:order_year:qk]</column>
+            <column>[federated.1agvfpk1hwbjh5181ow740ggdc48].[none:order_year:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' value='67' />
+            <format attr='width' value='326' />
+            <format attr='text-format' field='[federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_profit:qk]' value='c&quot;$&quot;#,##0,,.0M;(&quot;$&quot;#,##0,,.0M)' />
+            <format attr='text-align' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_profit:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontcolor='#1d9e75' fontname='Arial' fontsize='12'>Lợi Nhuận</run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#1d9e75' fontname='Arial' fontsize='32'><![CDATA[<[federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_profit:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{B6C8FAD3-E7C7-4436-B9E5-887294ADF8B6}' />
+    </worksheet>
+    <worksheet name='S3_Margin'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='YoY Growth' name='federated.1agvfpk1hwbjh5181ow740ggdc48' />
+            <datasource caption='Market Performance' name='federated.1a7agj317ep6b410grb7r0qag6po' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1a7agj317ep6b410grb7r0qag6po'>
+            <column caption='Margin % (Safe)' datatype='real' name='[Calculation_1453611481161730]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([total_profit]) / SUM([total_sales]) * 100' />
+            </column>
+            <column caption='Total Profit' datatype='real' name='[total_profit]' role='measure' type='quantitative' />
+            <column caption='Total Sales' datatype='real' name='[total_sales]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_1453611481161730]' derivation='User' name='[usr:Calculation_1453611481161730:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1agvfpk1hwbjh5181ow740ggdc48'>
+            <column-instance column='[order_year]' derivation='None' name='[none:order_year:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[order_year]' derivation='None' name='[none:order_year:qk]' pivot='key' type='quantitative' />
+            <column caption='Order Year' datatype='integer' name='[order_year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1agvfpk1hwbjh5181ow740ggdc48].[none:order_year:qk]' included-values='in-range'>
+            <min>2011</min>
+            <max>2014</max>
+          </filter>
+          <slices>
+            <column>[federated.1agvfpk1hwbjh5181ow740ggdc48].[none:order_year:qk]</column>
+            <column>[federated.1agvfpk1hwbjh5181ow740ggdc48].[none:order_year:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='331' />
+            <format attr='text-format' field='[federated.1a7agj317ep6b410grb7r0qag6po].[usr:Calculation_1453611481161730:qk]' value='n#,##0.0&quot;%&quot;;-#,##0.0&quot;%&quot;' />
+            <format attr='text-align' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1a7agj317ep6b410grb7r0qag6po].[usr:Calculation_1453611481161730:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontcolor='#ef9f27' fontname='Arial' fontsize='12'>Tỷ suất lợi nhuận</run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#ef9f27' fontname='Arial' fontsize='32'><![CDATA[<[federated.1a7agj317ep6b410grb7r0qag6po].[usr:Calculation_1453611481161730:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{B9F4A225-53D6-4197-95C6-8B58088C58A0}' />
+    </worksheet>
+    <worksheet name='S4_Loss Order Rate'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='YoY Growth' name='federated.1agvfpk1hwbjh5181ow740ggdc48' />
+            <datasource caption='fact_sales' name='federated.1orvg5r154dbgb1gnmr3q1loeqow' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1agvfpk1hwbjh5181ow740ggdc48'>
+            <column-instance column='[order_year]' derivation='None' name='[none:order_year:ok]' pivot='key' type='ordinal' />
+            <column caption='Order Year' datatype='integer' name='[order_year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1orvg5r154dbgb1gnmr3q1loeqow'>
+            <column caption='Loss Rate %' datatype='real' default-format='p0.0%' name='[Calculation_1348878091571204]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IIF([profit] &lt; 0, 1, 0)) / COUNT([order_id]) * 100' />
+            </column>
+            <column caption='Order Id' datatype='string' name='[order_id]' role='dimension' type='nominal' />
+            <column caption='Profit' datatype='real' name='[profit]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_1348878091571204]' derivation='User' name='[usr:Calculation_1348878091571204:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1agvfpk1hwbjh5181ow740ggdc48].[none:order_year:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='331' />
+            <format attr='text-format' field='[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_1348878091571204:qk]' value='n#,##0.0&quot;%&quot;;-#,##0.0&quot;%&quot;' />
+            <format attr='text-align' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_1348878091571204:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontcolor='#e24b4a' fontname='Arial' fontsize='12'>Tỷ lệ đơn hàng lỗ</run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#e24b4a' fontname='Arial' fontsize='32'><![CDATA[<[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_1348878091571204:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{6992718A-C6E0-440C-93FB-29D936C26AAA}' />
+    </worksheet>
+    <worksheet name='S4_Total orders'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='fact_sales' name='federated.1orvg5r154dbgb1gnmr3q1loeqow' />
+          </datasources>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='331' />
+            <format attr='text-align' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{1FBFC1F5-4E20-4908-A1BD-C768E3227B88}' />
+    </worksheet>
+    <worksheet name='Segment_Pie'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Segment Performance' name='federated.0a2kk1f0dp5y251aca3eq0xk1tqp' />
+            <datasource caption='YoY Growth' name='federated.1agvfpk1hwbjh5181ow740ggdc48' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0a2kk1f0dp5y251aca3eq0xk1tqp'>
+            <column caption='MIN(0)' datatype='integer' name='[Calculation_1453611519229960]' role='measure' type='quantitative' user:unnamed='Segment_Pie'>
+              <calculation class='tableau' formula='MIN(0)' />
+            </column>
+            <column caption='MIN(0)' datatype='integer' name='[Calculation_1453611519426570]' role='measure' type='quantitative' user:unnamed='Segment_Pie'>
+              <calculation class='tableau' formula='MIN(0)' />
+            </column>
+            <column caption='Center_Percentage' datatype='real' name='[Calculation_1453611524796428]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IF [segment] = &apos;Consumer&apos; THEN [total_orders] END) / SUM([total_orders])' />
+            </column>
+            <column-instance column='[order_year]' derivation='None' name='[none:order_year:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[segment]' derivation='None' name='[none:segment:nk]' pivot='key' type='nominal' />
+            <column caption='Order Year' datatype='integer' name='[order_year]' role='dimension' type='quantitative' />
+            <column caption='Segment' datatype='string' name='[segment]' role='dimension' type='nominal' />
+            <column caption='Total Orders' datatype='integer' name='[total_orders]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_1453611519229960]' derivation='User' name='[usr:Calculation_1453611519229960:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1453611519426570]' derivation='User' name='[usr:Calculation_1453611519426570:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1453611524796428]' derivation='User' name='[usr:Calculation_1453611524796428:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1agvfpk1hwbjh5181ow740ggdc48'>
+            <column-instance column='[order_year]' derivation='None' name='[none:order_year:ok]' pivot='key' type='ordinal' />
+            <column caption='Order Year' datatype='integer' name='[order_year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.0a2kk1f0dp5y251aca3eq0xk1tqp].[none:segment:nk]</column>
+            <column>[federated.1agvfpk1hwbjh5181ow740ggdc48].[none:order_year:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0a2kk1f0dp5y251aca3eq0xk1tqp].[usr:Calculation_1453611519426570:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+            <format attr='display' class='0' field='[federated.0a2kk1f0dp5y251aca3eq0xk1tqp].[usr:Calculation_1453611519229960:qk]' scope='rows' value='false' />
+            <format attr='display' class='0' field='[federated.0a2kk1f0dp5y251aca3eq0xk1tqp].[usr:Calculation_1453611519426570:qk]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' value='321' />
+            <format attr='text-format' field='[federated.0a2kk1f0dp5y251aca3eq0xk1tqp].[usr:Calculation_1453611524796428:qk]' value='p0.0%' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0a2kk1f0dp5y251aca3eq0xk1tqp].[none:segment:nk]' value='Segment'>
+              <formatted-text>
+                <run bold='true' fontcolor='#ffffff' fontname='Arial' fontsize='10'>Segment</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0a2kk1f0dp5y251aca3eq0xk1tqp].[usr:Calculation_1453611519229960:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0a2kk1f0dp5y251aca3eq0xk1tqp].[none:segment:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='1.4392818212509155' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#f2f4f7' />
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0a2kk1f0dp5y251aca3eq0xk1tqp].[usr:Calculation_1453611519426570:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.0a2kk1f0dp5y251aca3eq0xk1tqp].[usr:Calculation_1453611524796428:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#1b3a5c' fontname='Arial' fontsize='28'><![CDATA[<[federated.0a2kk1f0dp5y251aca3eq0xk1tqp].[usr:Calculation_1453611524796428:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='false' fontcolor='#1b3a5c' fontname='Arial' fontsize='15'>Consumer</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+                <format attr='wrap' value='auto' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-weight' value='bold' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='size' value='1' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-color' value='#f2f4f7' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0a2kk1f0dp5y251aca3eq0xk1tqp].[usr:Calculation_1453611519229960:qk] + [federated.0a2kk1f0dp5y251aca3eq0xk1tqp].[usr:Calculation_1453611519426570:qk])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{55ECB2A4-ECEE-4AE0-B56C-8B512C0C45B2}' />
+    </worksheet>
+    <worksheet name='YoY_Trend'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='YoY Growth' name='federated.1agvfpk1hwbjh5181ow740ggdc48' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1agvfpk1hwbjh5181ow740ggdc48'>
+            <column caption='Market' datatype='string' name='[market]' role='dimension' type='nominal' />
+            <column-instance column='[market]' derivation='None' name='[none:market:nk]' pivot='key' type='nominal' />
+            <column-instance column='[order_year]' derivation='None' name='[none:order_year:ok]' pivot='key' type='ordinal' />
+            <column caption='Order Year' datatype='integer' name='[order_year]' role='dimension' type='quantitative' />
+            <column-instance column='[total_profit]' derivation='Sum' name='[sum:total_profit:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_sales]' derivation='Sum' name='[sum:total_sales:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Profit' datatype='real' name='[total_profit]' role='measure' type='quantitative' />
+            <column caption='Total Sales' datatype='real' name='[total_sales]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1agvfpk1hwbjh5181ow740ggdc48].[none:market:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:market:nk]' member='&quot;Africa&quot;' />
+              <groupfilter function='member' level='[none:market:nk]' member='&quot;APAC&quot;' />
+              <groupfilter function='member' level='[none:market:nk]' member='&quot;Canada&quot;' />
+              <groupfilter function='member' level='[none:market:nk]' member='&quot;EMEA&quot;' />
+              <groupfilter function='member' level='[none:market:nk]' member='&quot;EU&quot;' />
+              <groupfilter function='member' level='[none:market:nk]' member='&quot;LATAM&quot;' />
+              <groupfilter function='member' level='[none:market:nk]' member='&quot;US&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1agvfpk1hwbjh5181ow740ggdc48].[none:market:nk]</column>
+            <column>[federated.1agvfpk1hwbjh5181ow740ggdc48].[none:order_year:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_profit:qk]' field-type='quantitative' fold='true' max='2000000.0' min='0.0' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_sales:qk]' field-type='quantitative' max='5000000.0' min='0.0' range-type='fixed' scope='rows' type='space' />
+            <format attr='display' class='0' field='[federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_profit:qk]' scope='rows' value='false' />
+            <format attr='display' class='0' field='[federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_sales:qk]' scope='rows' value='false' />
+            <format attr='render-fold-reversed' value='true' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1agvfpk1hwbjh5181ow740ggdc48].[none:order_year:ok]' value='197' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_sales:qk]' value='c&quot;$&quot;#,##0,,M;(&quot;$&quot;#,##0,,M)' />
+            <format attr='text-format' field='[federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_profit:qk]' value='c&quot;$&quot;#,##0,K;(&quot;$&quot;#,##0,K)' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_profit:qk]' palette='green_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-color' scope='rows' value='#d0d7de' />
+            <format attr='line-pattern-only' scope='rows' value='dashed' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='legend-title'>
+            <format attr='text-align' value='auto' />
+            <_.fcp.IndividualControlFormatting.true...format attr='text-align' field='[federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_sales:qk]' id='legend-color' value='auto' />
+            <_.fcp.IndividualControlFormatting.true...format attr='font-family' field='[federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_sales:qk]' id='legend-color' value='Arial' />
+            <_.fcp.IndividualControlFormatting.true...format attr='font-weight' field='[federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_sales:qk]' id='legend-color' value='bold' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_sales:qk]' value='Doanh Thu&#10;'>
+              <formatted-text>
+                <run fontalignment='1' fontcolor='#000000' fontsize='10'>Doanh Thu</run>
+                <run fontalignment='1'>Æ&#10;</run>
+              </formatted-text>
+            </format>
+            <format attr='color' field='[federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_profit:qk]' value='Lợi Nhuận&#10;'>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontname='Arial'>Lợi Nhuận</run>
+                <run fontalignment='1'>Æ&#10;</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.1agvfpk1hwbjh5181ow740ggdc48].[none:order_year:ok]' value='Year'>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontname='Arial' fontsize='10'>Year</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-mode' value='line-ends' />
+                <format attr='size' value='2' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-color' value='#2e6fbf' />
+                <format attr='line-interpolation' value='linear' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_sales:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_sales:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='vertical-align' value='auto' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='color' value='#2e6fbf' />
+                <format attr='font-family' value='Arial' />
+                <format attr='font-weight' value='bold' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='2' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-mode' value='line-ends' />
+                <format attr='mark-color' value='#2e6fbf' />
+                <format attr='line-interpolation' value='linear' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_profit:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_profit:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='color' value='#1d9e75' />
+                <format attr='font-family' value='Arial' />
+                <format attr='font-weight' value='bold' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-mode' value='line-ends' />
+                <format attr='size' value='2' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-color' value='#1d9e75' />
+                <format attr='line-interpolation' value='linear' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_sales:qk] + [federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_profit:qk])</rows>
+        <cols>[federated.1agvfpk1hwbjh5181ow740ggdc48].[none:order_year:ok]</cols>
+      </table>
+      <simple-id uuid='{040279C7-1FAF-4C8B-8BC2-CAC9BDA33AE2}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#f2f4f7' />
+        </style-rule>
+      </style>
+      <size maxheight='768' maxwidth='1366' minheight='768' minwidth='1366' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='Market Performance' name='federated.1a7agj317ep6b410grb7r0qag6po' />
+        <datasource caption='YoY Growth' name='federated.1agvfpk1hwbjh5181ow740ggdc48' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1a7agj317ep6b410grb7r0qag6po'>
+        <column caption='Market' datatype='string' name='[market]' role='dimension' type='nominal' />
+        <column-instance column='[market]' derivation='None' name='[none:market:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <datasource-dependencies datasource='federated.1agvfpk1hwbjh5181ow740ggdc48'>
+        <column-instance column='[order_year]' derivation='None' name='[none:order_year:ok]' pivot='key' type='ordinal' />
+        <column caption='Order Year' datatype='integer' name='[order_year]' role='dimension' type='quantitative' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97916' id='64' param='horz' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='97916' id='7' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+              <zone fixed-size='167' h='21745' id='3' is-fixed='true' layout-strategy-id='distribute-evenly' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+                <zone forceUpdate='true' h='10937' id='5' type-v2='text' w='98828' x='586' y='1042'>
+                  <formatted-text>
+                    <run bold='true' fontcolor='#ffffff' fontname='Arial' fontsize='20'>Tổng Quan Hoạt Động Kinh Doanh — Global Superstore</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='10807' id='15' layout-strategy-id='distribute-evenly' param='horz' type-v2='layout-flow' w='98828' x='586' y='11979'>
+                  <zone fixed-size='334' h='10807' id='8' is-fixed='true' name='S1_Revenue' show-title='false' w='24743' x='586' y='11979'>
+                    <layout-cache cell-count-h='1' type-h='cell' type-w='fixed' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone fixed-size='231' h='10807' id='12' is-fixed='true' name='S2_Profit' show-title='false' w='24744' x='25329' y='11979'>
+                    <layout-cache cell-count-h='1' type-h='cell' type-w='fixed' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='10807' id='13' name='S3_Margin' show-title='false' w='24671' x='50073' y='11979'>
+                    <layout-cache cell-count-h='1' cell-count-w='1' type-h='cell' type-w='cell' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone fixed-size='225' h='10807' id='14' is-fixed='true' name='S4_Loss Order Rate' show-title='false' w='24670' x='74744' y='11979'>
+                    <layout-cache cell-count-h='1' type-h='cell' type-w='fixed' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+              <zone fixed-size='260' h='33854' id='49' is-fixed='true' param='horz' type-v2='layout-flow' w='98828' x='586' y='22787'>
+                <zone fixed-size='769' h='33854' id='50' is-fixed='true' name='YoY_Trend' show-title='false' w='56882' x='586' y='22787'>
+                  <layout-cache minheight='122' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='2' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='33854' id='55' name='Market_Bar' show-title='false' w='41946' x='57468' y='22787'>
+                  <layout-cache cell-count-h='7' minwidth='180' type-h='cell' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='2' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone h='42317' id='67' is-fixed='true' type-v2='layout-basic' w='98828' x='586' y='56641'>
+                <zone h='42317' id='58' param='horz' type-v2='layout-flow' w='62957' x='586' y='56641'>
+                  <zone h='42317' id='59' name='Quarterly_Revenue' show-title='false' w='62957' x='586' y='56641'>
+                    <layout-cache cell-count-w='16' minheight='142' type-h='scalable' type-w='cell' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='solid' />
+                      <format attr='border-width' value='2' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+                <zone h='42317' id='68' param='horz' type-v2='layout-flow' w='35871' x='63543' y='56641'>
+                  <zone h='42317' id='62' name='Segment_Pie' show-title='false' w='35871' x='63543' y='56641'>
+                    <layout-cache cell-count-w='1' minheight='100' type-h='scalable' type-w='cell' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='solid' />
+                      <format attr='border-width' value='2' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+            <format attr='background-color' value='#1b3a5c' />
+          </zone-style>
+        </zone>
+        <zone h='6120' id='29' mode='dropdown' name='S1_Revenue' param='[federated.1a7agj317ep6b410grb7r0qag6po].[none:market:nk]' type-v2='filter' w='11567' x='80088' y='3906' />
+        <zone h='5339' id='53' name='YoY_Trend' pane-specification-id='4' param='[federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_sales:qk]' single-line='false' type-v2='color' w='10395' x='3294' y='28385' />
+        <zone h='5208' id='54' name='YoY_Trend' pane-specification-id='5' param='[federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_profit:qk]' type-v2='color' w='9956' x='13982' y='28255' />
+        <zone h='11143' id='66' name='Segment_Pie' pane-specification-id='1' param='[federated.0a2kk1f0dp5y251aca3eq0xk1tqp].[none:segment:nk]' type-v2='color' w='11667' x='91250' y='71000' />
+        <zone h='6771' id='25' mode='dropdown' name='S1_Revenue' param='[federated.1agvfpk1hwbjh5181ow740ggdc48].[none:order_year:ok]' type-v2='filter' values='database' w='12299' x='66471' y='4036' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1850' minheight='1850' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='77' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='76' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+                <zone forceUpdate='true' h='10937' id='5' type-v2='text' w='98828' x='586' y='1042'>
+                  <formatted-text>
+                    <run bold='true' fontcolor='#ffffff' fontname='Arial' fontsize='20'>Tổng Quan Hoạt Động Kinh Doanh — Global Superstore</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6120' id='29' mode='dropdown' name='S1_Revenue' param='[federated.1a7agj317ep6b410grb7r0qag6po].[none:market:nk]' type-v2='filter' w='11567' x='80088' y='3906'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6771' id='25' mode='dropdown' name='S1_Revenue' param='[federated.1agvfpk1hwbjh5181ow740ggdc48].[none:order_year:ok]' type-v2='filter' values='database' w='12299' x='66471' y='4036'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='75' h='10807' id='8' is-fixed='true' name='S1_Revenue' show-title='false' w='24743' x='586' y='11979'>
+                  <layout-cache cell-count-h='1' type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='75' h='10807' id='12' is-fixed='true' name='S2_Profit' show-title='false' w='24744' x='25329' y='11979'>
+                  <layout-cache cell-count-h='1' type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='75' h='10807' id='13' is-fixed='true' name='S3_Margin' show-title='false' w='24671' x='50073' y='11979'>
+                  <layout-cache cell-count-h='1' cell-count-w='1' type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='75' h='10807' id='14' is-fixed='true' name='S4_Loss Order Rate' show-title='false' w='24670' x='74744' y='11979'>
+                  <layout-cache cell-count-h='1' type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='252' h='33854' id='50' is-fixed='true' name='YoY_Trend' show-title='false' w='56882' x='586' y='22787'>
+                  <layout-cache minheight='122' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5339' id='53' name='YoY_Trend' pane-specification-id='4' param='[federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_sales:qk]' single-line='false' type-v2='color' w='10395' x='3294' y='28385'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5208' id='54' name='YoY_Trend' pane-specification-id='5' param='[federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_profit:qk]' type-v2='color' w='9956' x='13982' y='28255'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='252' h='33854' id='55' is-fixed='true' name='Market_Bar' show-title='false' w='41946' x='57468' y='22787'>
+                  <layout-cache cell-count-h='7' minwidth='180' type-h='cell' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='42317' id='59' is-fixed='true' name='Quarterly_Revenue' show-title='false' w='62957' x='586' y='56641'>
+                  <layout-cache cell-count-w='16' minheight='142' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='42317' id='62' is-fixed='true' name='Segment_Pie' show-title='false' w='35871' x='63543' y='56641'>
+                  <layout-cache cell-count-w='1' minheight='100' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='11143' id='66' name='Segment_Pie' pane-specification-id='1' param='[federated.0a2kk1f0dp5y251aca3eq0xk1tqp].[none:segment:nk]' type-v2='color' w='11667' x='91250' y='71000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+                <format attr='background-color' value='#1b3a5c' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{BD5464FA-491E-4AAE-84E4-F3DC532B51C4}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='93'>
+    <window class='worksheet' name='S1_Revenue'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C51603A4-7EC4-4BAA-B0A7-05276D5D3697}' />
+    </window>
+    <window class='worksheet' name='S2_Profit'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1AAE45F1-F08F-4EE2-B6CF-8BFC518122BF}' />
+    </window>
+    <window class='worksheet' name='S3_Margin'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{04DCBADA-264A-4412-8619-A34091E5B2F5}' />
+    </window>
+    <window class='worksheet' name='S4_Loss Order Rate'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F4EC179D-B254-4929-8967-02ED8EC80922}' />
+    </window>
+    <window class='worksheet' name='S4_Total orders'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1664A354-3EA9-411A-B648-09EB67EAF075}' />
+    </window>
+    <window class='worksheet' name='YoY_Trend'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='4' param='[federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_sales:qk]' type='color' />
+            <card pane-specification-id='5' param='[federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_profit:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1AEFD5D5-F403-49E6-A987-B5BDA4538DE5}' />
+    </window>
+    <window class='worksheet' name='Market_Bar'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.1a7agj317ep6b410grb7r0qag6po].[usr:Calculation_1453611509055492:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BE97F14F-8246-4646-93D2-84D30775552D}' />
+    </window>
+    <window class='worksheet' name='Quarterly_Revenue'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1orvg5r154dbgb1gnmr3q1loeqow].[none:Calculation_1453611511386118:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{80927851-7EF9-41D6-BD5E-E1AC392816ED}' />
+    </window>
+    <window class='worksheet' name='Segment_Pie'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0a2kk1f0dp5y251aca3eq0xk1tqp].[none:segment:nk]' type='filter' />
+            <card pane-specification-id='1' param='[federated.0a2kk1f0dp5y251aca3eq0xk1tqp].[none:segment:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{17DD4256-B5B0-449D-A9C1-A43F26C89086}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Market_Bar'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Quarterly_Revenue'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='S1_Revenue'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='S2_Profit'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='S3_Margin'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='S4_Loss Order Rate'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Segment_Pie'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='YoY_Trend'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='5' />
+      <simple-id uuid='{8D24F697-42D2-4156-BD21-4E05B54F2BAA}' />
+    </window>
+  </windows>
+</workbook>
