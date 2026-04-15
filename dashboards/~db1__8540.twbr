@@ -10,6 +10,7 @@
     <MarkAnimation />
     <ObjectModelEncapsulateLegacy />
     <ObjectModelTableType />
+    <PatternedLineMarks />
     <SchemaViewerObjectModel />
     <SetMembershipControl />
     <SheetIdentifierTracking />
@@ -21,6 +22,12 @@
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
     <preference name='ui.shelf.height' value='26' />
+    <color-palette custom='true' name='color' type='ordered-sequential'>
+      <color>#1d9e75</color>
+      <color>#ef9f27</color>
+      <color>#e24b4a</color>
+      <color>#b71c1c</color>
+    </color-palette>
   </preferences>
   <datasources>
     <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
@@ -607,70 +614,6 @@
               <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
             </attributes>
           </metadata-record>
-          <metadata-record class='capability'>
-            <remote-name />
-            <remote-type>0</remote-type>
-            <parent-name>[dim_customer.csv]</parent-name>
-            <remote-alias />
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
-              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
-              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
-              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
-              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
-              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='capability'>
-            <remote-name />
-            <remote-type>0</remote-type>
-            <parent-name>[dim_location.csv]</parent-name>
-            <remote-alias />
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
-              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
-              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
-              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
-              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
-              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='capability'>
-            <remote-name />
-            <remote-type>0</remote-type>
-            <parent-name>[dim_product.csv]</parent-name>
-            <remote-alias />
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
-              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
-              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
-              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
-              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
-              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='capability'>
-            <remote-name />
-            <remote-type>0</remote-type>
-            <parent-name>[dim_time.csv]</parent-name>
-            <remote-alias />
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
-              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
-              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
-              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
-              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
-              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
-            </attributes>
-          </metadata-record>
           <metadata-record class='column'>
             <remote-name>order_id</remote-name>
             <remote-type>129</remote-type>
@@ -684,7 +627,6 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <object-id>[fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>customer_id</remote-name>
@@ -699,7 +641,6 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <object-id>[fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>product_id</remote-name>
@@ -714,7 +655,6 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <object-id>[fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>location_id</remote-name>
@@ -729,7 +669,6 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <object-id>[fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>order_date</remote-name>
@@ -741,7 +680,6 @@
             <local-type>date</local-type>
             <aggregation>Year</aggregation>
             <contains-null>true</contains-null>
-            <object-id>[fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>ship_date</remote-name>
@@ -753,7 +691,6 @@
             <local-type>date</local-type>
             <aggregation>Year</aggregation>
             <contains-null>true</contains-null>
-            <object-id>[fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>ship_mode</remote-name>
@@ -768,7 +705,6 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <object-id>[fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>order_priority</remote-name>
@@ -783,7 +719,6 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <object-id>[fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>sales</remote-name>
@@ -795,7 +730,6 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <object-id>[fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>quantity</remote-name>
@@ -807,7 +741,6 @@
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <object-id>[fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>discount</remote-name>
@@ -819,7 +752,6 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <object-id>[fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>profit</remote-name>
@@ -831,7 +763,6 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <object-id>[fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>shipping_cost</remote-name>
@@ -843,7 +774,6 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <object-id>[fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>profit_margin</remote-name>
@@ -855,7 +785,6 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <object-id>[fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>ship_delay_days</remote-name>
@@ -867,7 +796,22 @@
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <object-id>[fact_sales.csv_1702040AFEB44DD9871A59FCBD53B5DA]</object-id>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[dim_customer.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>customer_id</remote-name>
@@ -882,7 +826,6 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <object-id>[dim_customer.csv_ED6898C8A15940E8ACA58B4D9B560906]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>customer_name</remote-name>
@@ -897,7 +840,6 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <object-id>[dim_customer.csv_ED6898C8A15940E8ACA58B4D9B560906]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>segment</remote-name>
@@ -912,7 +854,22 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <object-id>[dim_customer.csv_ED6898C8A15940E8ACA58B4D9B560906]</object-id>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[dim_location.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>location_id</remote-name>
@@ -927,7 +884,6 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <object-id>[dim_location.csv_7F1C54D18A2748549BCCAD840E131630]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>market</remote-name>
@@ -942,7 +898,6 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <object-id>[dim_location.csv_7F1C54D18A2748549BCCAD840E131630]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>region</remote-name>
@@ -957,7 +912,6 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <object-id>[dim_location.csv_7F1C54D18A2748549BCCAD840E131630]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>country</remote-name>
@@ -972,7 +926,6 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <object-id>[dim_location.csv_7F1C54D18A2748549BCCAD840E131630]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>state</remote-name>
@@ -987,7 +940,6 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <object-id>[dim_location.csv_7F1C54D18A2748549BCCAD840E131630]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>city</remote-name>
@@ -1002,7 +954,22 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <object-id>[dim_location.csv_7F1C54D18A2748549BCCAD840E131630]</object-id>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[dim_product.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>product_id</remote-name>
@@ -1017,7 +984,6 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <object-id>[dim_product.csv_FFB023610209425CB9C16EDB510E8B6A]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>category</remote-name>
@@ -1032,7 +998,6 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <object-id>[dim_product.csv_FFB023610209425CB9C16EDB510E8B6A]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>sub_category</remote-name>
@@ -1047,7 +1012,6 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <object-id>[dim_product.csv_FFB023610209425CB9C16EDB510E8B6A]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>product_name</remote-name>
@@ -1062,7 +1026,22 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <object-id>[dim_product.csv_FFB023610209425CB9C16EDB510E8B6A]</object-id>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[dim_time.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>date</remote-name>
@@ -1074,7 +1053,6 @@
             <local-type>date</local-type>
             <aggregation>Year</aggregation>
             <contains-null>true</contains-null>
-            <object-id>[dim_time.csv_39ABCAA265B2401086AB54570F51B35C]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>year</remote-name>
@@ -1086,7 +1064,6 @@
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <object-id>[dim_time.csv_39ABCAA265B2401086AB54570F51B35C]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>quarter</remote-name>
@@ -1098,7 +1075,6 @@
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <object-id>[dim_time.csv_39ABCAA265B2401086AB54570F51B35C]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>month</remote-name>
@@ -1110,7 +1086,6 @@
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <object-id>[dim_time.csv_39ABCAA265B2401086AB54570F51B35C]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>month_name</remote-name>
@@ -1125,7 +1100,6 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <object-id>[dim_time.csv_39ABCAA265B2401086AB54570F51B35C]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>day</remote-name>
@@ -1137,7 +1111,6 @@
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <object-id>[dim_time.csv_39ABCAA265B2401086AB54570F51B35C]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>weekday</remote-name>
@@ -1152,7 +1125,6 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <object-id>[dim_time.csv_39ABCAA265B2401086AB54570F51B35C]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>is_weekend</remote-name>
@@ -1164,11 +1136,40 @@
             <local-type>boolean</local-type>
             <aggregation>Count</aggregation>
             <contains-null>true</contains-null>
-            <object-id>[dim_time.csv_39ABCAA265B2401086AB54570F51B35C]</object-id>
           </metadata-record>
         </metadata-records>
       </connection>
       <aliases enabled='yes' />
+      <column caption='Loss_Order_Count' datatype='integer' name='[Calculation_0586924252835840]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IIF([profit] &lt; 0, 1, 0))' />
+      </column>
+      <column caption='S2_RevenueAtRisk' datatype='real' name='[Calculation_0586924252930049]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IIF([profit] &lt; 0, [sales], 0))' />
+      </column>
+      <column caption='Lỗ trung bình/đơn' datatype='real' name='[Calculation_0586924253052930]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Calculation_0586924252930049] / [Calculation_0586924252835840]' />
+      </column>
+      <column caption='Loss Rate Label' datatype='string' name='[Calculation_0586924255670275]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='STR(ROUND(SUM(IIF([profit]&lt;0,1,0)) / COUNT([order_id]) * 100, 1)) + &quot;% đơn lỗ&quot;' />
+      </column>
+      <column caption='Avg Loss per Order' datatype='real' name='[Calculation_0586924258611204]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IIF([profit]&lt;0, [profit], 0)) / SUM(IIF([profit]&lt;0, 1, 0))' />
+      </column>
+      <column caption='Avg Profit by Band' datatype='real' name='[Calculation_0586924260380679]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='AVG([profit])&#13;&#10;&#13;&#10;// Kéo vào Rows — phân theo [Discount Band]&#13;&#10;// Kết quả đúng từng band:&#13;&#10;// 0-10%: +62.56  |  10-30%: +21.00&#13;&#10;// 30-50%: -61.56  |  50%+: -98.89' />
+      </column>
+      <column caption='Loss Rate % by Band' datatype='real' name='[Calculation_0586924260925448]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IIF([profit] &lt; 0, 1, 0)) / COUNT([order_id]) * 100' />
+      </column>
+      <column caption='Bar Color' datatype='string' name='[Calculation_0586924261556233]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='IF AVG([profit]) &gt;= 0 THEN &quot;Profit&quot;&#13;&#10;ELSE &quot;Loss&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Avg Discount %' datatype='real' name='[Calculation_0586924310003725]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='AVG([discount]) * 100' />
+      </column>
+      <column caption='Avg Profit Margin %' datatype='real' name='[Calculation_0586924310073358]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([profit]) / SUM([sales]) * 100' />
+      </column>
       <column caption='Total Sales' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Calculation_1348878091141120]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='SUM([sales])' />
       </column>
@@ -1247,18 +1248,31 @@
       <column caption='Weekday' datatype='string' name='[weekday]' role='dimension' type='nominal' />
       <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
       <column-instance column='[Calculation_1453611511386118]' derivation='None' name='[none:Calculation_1453611511386118:nk]' pivot='key' type='nominal' />
+      <column-instance column='[category]' derivation='None' name='[none:category:nk]' pivot='key' type='nominal' />
       <column-instance column='[order_date]' derivation='Quarter' name='[qr:order_date:ok]' pivot='key' type='ordinal' />
       <column-instance column='[sales]' derivation='Sum' name='[sum:sales:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_0586924260380679]' derivation='User' name='[usr:Calculation_0586924260380679:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_0586924260925448]' derivation='User' name='[usr:Calculation_0586924260925448:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_0586924261556233]' derivation='User' name='[usr:Calculation_0586924261556233:nk]' pivot='key' type='nominal' />
       <column-instance column='[order_date]' derivation='Year' name='[yr:order_date:ok]' pivot='key' type='ordinal' />
       <drill-paths>
         <drill-path name='country, state, city' />
       </drill-paths>
-      <layout common-percentage='0.773788' dim-ordering='alphabetic' measure-ordering='alphabetic' parameter-percentage='0.226212' show-structure='true' user-set-layout-v2='true' />
+      <layout common-percentage='0.933198' dim-ordering='alphabetic' measure-ordering='alphabetic' parameter-percentage='0.0668016' show-structure='true' user-set-layout-v2='true' />
       <style>
         <style-rule element='mark'>
           <encoding attr='color' field='[:Measure Names]' type='palette'>
             <map to='#4e79a7'>
               <bucket>&quot;[federated.1orvg5r154dbgb1gnmr3q1loeqow]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_0586924260925448:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1pgqexn1iqioua130n5vi1ggmzd1].[sum:loss_rate_pct:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1pgqexn1iqioua130n5vi1ggmzd1].[sum:avg_profit:qk]&quot;</bucket>
             </map>
             <map to='#f28e2b'>
               <bucket>&quot;[federated.1orvg5r154dbgb1gnmr3q1loeqow].[sum:sales:qk]&quot;</bucket>
@@ -1309,11 +1323,99 @@
               <bucket>&quot;\#185FA5&quot;</bucket>
             </map>
           </encoding>
+          <encoding attr='color' field='[usr:Calculation_0586924261556233:nk]' type='palette'>
+            <map to='#1d9e75'>
+              <bucket>&quot;Profit&quot;</bucket>
+            </map>
+            <map to='#e24b4a'>
+              <bucket>&quot;Loss&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[usr:Calculation_0586924261556233:nk]&#10;[:Measure Names]' type='palette'>
+            <map to='#1d9e75'>
+              <multibucket>
+                <bucket>&quot;Profit&quot;</bucket>
+                <bucket>&quot;[federated.1pgqexn1iqioua130n5vi1ggmzd1].[sum:avg_profit:qk]&quot;</bucket>
+              </multibucket>
+            </map>
+            <map to='#4e79a7'>
+              <multibucket>
+                <bucket>&quot;Loss&quot;</bucket>
+                <bucket>&quot;[federated.1pgqexn1iqioua130n5vi1ggmzd1].[avg:avg_profit:qk]&quot;</bucket>
+              </multibucket>
+            </map>
+            <map to='#59a14f'>
+              <multibucket>
+                <bucket>&quot;Loss&quot;</bucket>
+                <bucket>&quot;[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_0586924260380679:qk]&quot;</bucket>
+              </multibucket>
+            </map>
+            <map to='#76b7b2'>
+              <multibucket>
+                <bucket>&quot;Profit&quot;</bucket>
+                <bucket>&quot;[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_0586924260925448:qk]&quot;</bucket>
+              </multibucket>
+            </map>
+            <map to='#a0cbe8'>
+              <multibucket>
+                <bucket>&quot;Loss&quot;</bucket>
+                <bucket>&quot;[federated.1pgqexn1iqioua130n5vi1ggmzd1].[sum:loss_rate_pct:qk]&quot;</bucket>
+              </multibucket>
+            </map>
+            <map to='#e15759'>
+              <multibucket>
+                <bucket>&quot;Profit&quot;</bucket>
+                <bucket>&quot;[federated.1pgqexn1iqioua130n5vi1ggmzd1].[avg:avg_profit:qk]&quot;</bucket>
+              </multibucket>
+            </map>
+            <map to='#e24b4a'>
+              <multibucket>
+                <bucket>&quot;Loss&quot;</bucket>
+                <bucket>&quot;[federated.1pgqexn1iqioua130n5vi1ggmzd1].[sum:avg_profit:qk]&quot;</bucket>
+              </multibucket>
+            </map>
+            <map to='#edc948'>
+              <multibucket>
+                <bucket>&quot;Profit&quot;</bucket>
+                <bucket>&quot;[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_0586924260380679:qk]&quot;</bucket>
+              </multibucket>
+            </map>
+            <map to='#f28e2b'>
+              <multibucket>
+                <bucket>&quot;Loss&quot;</bucket>
+                <bucket>&quot;[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_0586924260925448:qk]&quot;</bucket>
+              </multibucket>
+            </map>
+            <map to='#ffbe7d'>
+              <multibucket>
+                <bucket>&quot;Profit&quot;</bucket>
+                <bucket>&quot;[federated.1pgqexn1iqioua130n5vi1ggmzd1].[sum:loss_rate_pct:qk]&quot;</bucket>
+              </multibucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:category:nk]' type='palette'>
+            <map to='#1d9e75'>
+              <bucket>&quot;Technology&quot;</bucket>
+            </map>
+            <map to='#2e6fbf'>
+              <bucket>&quot;Office Supplies&quot;</bucket>
+            </map>
+            <map to='#ef9f27'>
+              <bucket>&quot;Furniture&quot;</bucket>
+            </map>
+          </encoding>
         </style-rule>
       </style>
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
       </semantic-values>
+      <datasource-dependencies datasource='federated.1pgqexn1iqioua130n5vi1ggmzd1'>
+        <column-instance column='[avg_profit]' derivation='Avg' name='[avg:avg_profit:qk]' pivot='key' type='quantitative' />
+        <column caption='Avg Profit' datatype='real' name='[avg_profit]' role='measure' type='quantitative' />
+        <column caption='Loss Rate Pct' datatype='real' name='[loss_rate_pct]' role='measure' type='quantitative' />
+        <column-instance column='[avg_profit]' derivation='Sum' name='[sum:avg_profit:qk]' pivot='key' type='quantitative' />
+        <column-instance column='[loss_rate_pct]' derivation='Sum' name='[sum:loss_rate_pct:qk]' pivot='key' type='quantitative' />
+      </datasource-dependencies>
       <object-graph>
         <objects>
           <object caption='dim_customer.csv' id='dim_customer.csv_ED6898C8A15940E8ACA58B4D9B560906'>
@@ -1674,8 +1776,16 @@
         <column-instance column='[Calculation_1453611481161730]' derivation='User' name='[usr:Calculation_1453611481161730:qk]' pivot='key' type='quantitative' />
       </datasource-dependencies>
       <datasource-dependencies datasource='federated.1orvg5r154dbgb1gnmr3q1loeqow'>
+        <column caption='Total Sales' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Calculation_1348878091141120]' role='measure' type='quantitative'>
+          <calculation class='tableau' formula='SUM([sales])' />
+        </column>
+        <column caption='Total Profit' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Calculation_1348878091341825]' role='measure' type='quantitative'>
+          <calculation class='tableau' formula='SUM([profit])' />
+        </column>
         <column caption='Sales' datatype='real' name='[sales]' role='measure' type='quantitative' />
         <column-instance column='[sales]' derivation='Sum' name='[sum:sales:qk]' pivot='key' type='quantitative' />
+        <column-instance column='[Calculation_1348878091141120]' derivation='User' name='[usr:Calculation_1348878091141120:qk]' pivot='key' type='quantitative' />
+        <column-instance column='[Calculation_1348878091341825]' derivation='User' name='[usr:Calculation_1348878091341825:qk]' pivot='key' type='quantitative' />
       </datasource-dependencies>
       <object-graph>
         <objects>
@@ -1692,6 +1802,514 @@
                   <column datatype='real' name='sales_growth_pct' ordinal='6' />
                   <column datatype='real' name='profit_growth_pct' ordinal='7' />
                   <column datatype='real' name='profit_margin_pct' ordinal='8' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='agg_discount_impact' inline='true' name='federated.1pgqexn1iqioua130n5vi1ggmzd1' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='agg_discount_impact' name='textscan.07l1fmp1cpkta211753gu0giq97b'>
+            <connection class='textscan' directory='C:/Users/Sang1/Downloads/Superstore-Analytics-Pro/data/aggregates' filename='agg_discount_impact.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.07l1fmp1cpkta211753gu0giq97b' name='agg_discount_impact.csv' table='[agg_discount_impact#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='discount_band' ordinal='0' />
+            <column datatype='integer' name='total_orders' ordinal='1' />
+            <column datatype='real' name='avg_profit' ordinal='2' />
+            <column datatype='real' name='total_profit' ordinal='3' />
+            <column datatype='real' name='avg_sales' ordinal='4' />
+            <column datatype='real' name='total_sales' ordinal='5' />
+            <column datatype='integer' name='loss_orders' ordinal='6' />
+            <column datatype='real' name='loss_rate_pct' ordinal='7' />
+            <column datatype='real' name='revenue_at_risk' ordinal='8' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[agg_discount_impact.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>discount_band</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[discount_band]</local-name>
+            <parent-name>[agg_discount_impact.csv]</parent-name>
+            <remote-alias>discount_band</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[agg_discount_impact.csv_A243C29AB2074EFE9F4857E33B4D76F9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_orders]</local-name>
+            <parent-name>[agg_discount_impact.csv]</parent-name>
+            <remote-alias>total_orders</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_discount_impact.csv_A243C29AB2074EFE9F4857E33B4D76F9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_profit</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_profit]</local-name>
+            <parent-name>[agg_discount_impact.csv]</parent-name>
+            <remote-alias>avg_profit</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_discount_impact.csv_A243C29AB2074EFE9F4857E33B4D76F9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_profit</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_profit]</local-name>
+            <parent-name>[agg_discount_impact.csv]</parent-name>
+            <remote-alias>total_profit</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_discount_impact.csv_A243C29AB2074EFE9F4857E33B4D76F9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_sales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_sales]</local-name>
+            <parent-name>[agg_discount_impact.csv]</parent-name>
+            <remote-alias>avg_sales</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_discount_impact.csv_A243C29AB2074EFE9F4857E33B4D76F9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_sales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_sales]</local-name>
+            <parent-name>[agg_discount_impact.csv]</parent-name>
+            <remote-alias>total_sales</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_discount_impact.csv_A243C29AB2074EFE9F4857E33B4D76F9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>loss_orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[loss_orders]</local-name>
+            <parent-name>[agg_discount_impact.csv]</parent-name>
+            <remote-alias>loss_orders</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_discount_impact.csv_A243C29AB2074EFE9F4857E33B4D76F9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>loss_rate_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[loss_rate_pct]</local-name>
+            <parent-name>[agg_discount_impact.csv]</parent-name>
+            <remote-alias>loss_rate_pct</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_discount_impact.csv_A243C29AB2074EFE9F4857E33B4D76F9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>revenue_at_risk</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[revenue_at_risk]</local-name>
+            <parent-name>[agg_discount_impact.csv]</parent-name>
+            <remote-alias>revenue_at_risk</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_discount_impact.csv_A243C29AB2074EFE9F4857E33B4D76F9]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='agg_discount_impact.csv' datatype='table' name='[__tableau_internal_object_id__].[agg_discount_impact.csv_A243C29AB2074EFE9F4857E33B4D76F9]' role='measure' type='quantitative' />
+      <column caption='Avg Profit' datatype='real' name='[avg_profit]' role='measure' type='quantitative' />
+      <column caption='Avg Sales' datatype='real' name='[avg_sales]' role='measure' type='quantitative' />
+      <column caption='Discount Band' datatype='string' name='[discount_band]' role='dimension' type='nominal' />
+      <column caption='Loss Orders' datatype='integer' name='[loss_orders]' role='measure' type='quantitative' />
+      <column caption='Loss Rate Pct' datatype='real' name='[loss_rate_pct]' role='measure' type='quantitative' />
+      <column caption='Revenue At Risk' datatype='real' name='[revenue_at_risk]' role='measure' type='quantitative' />
+      <column caption='Total Orders' datatype='integer' name='[total_orders]' role='measure' type='quantitative' />
+      <column caption='Total Profit' datatype='real' name='[total_profit]' role='measure' type='quantitative' />
+      <column caption='Total Sales' datatype='real' name='[total_sales]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='agg_discount_impact.csv' id='agg_discount_impact.csv_A243C29AB2074EFE9F4857E33B4D76F9'>
+            <properties context=''>
+              <relation connection='textscan.07l1fmp1cpkta211753gu0giq97b' name='agg_discount_impact.csv' table='[agg_discount_impact#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='discount_band' ordinal='0' />
+                  <column datatype='integer' name='total_orders' ordinal='1' />
+                  <column datatype='real' name='avg_profit' ordinal='2' />
+                  <column datatype='real' name='total_profit' ordinal='3' />
+                  <column datatype='real' name='avg_sales' ordinal='4' />
+                  <column datatype='real' name='total_sales' ordinal='5' />
+                  <column datatype='integer' name='loss_orders' ordinal='6' />
+                  <column datatype='real' name='loss_rate_pct' ordinal='7' />
+                  <column datatype='real' name='revenue_at_risk' ordinal='8' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='Discount Heatmap' inline='true' name='federated.1jad2aq160oeq313vbwf90pcptp1' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='agg_discount_impact_by_category' name='textscan.1louvrm17vzf6g1c4tdm10k6kjhn'>
+            <connection class='textscan' directory='C:/Users/Sang1/Downloads/Superstore-Analytics-Pro/data/aggregates' filename='agg_discount_impact_by_category.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1louvrm17vzf6g1c4tdm10k6kjhn' name='agg_discount_impact_by_category.csv' table='[agg_discount_impact_by_category#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='category' ordinal='0' />
+            <column datatype='string' name='discount_band' ordinal='1' />
+            <column datatype='real' name='avg_profit' ordinal='2' />
+            <column datatype='real' name='loss_rate_pct' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[agg_discount_impact_by_category.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[category]</local-name>
+            <parent-name>[agg_discount_impact_by_category.csv]</parent-name>
+            <remote-alias>category</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[agg_discount_impact_by_category.csv_DF3216F0B50C4D0DB544B89412C69512]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>discount_band</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[discount_band]</local-name>
+            <parent-name>[agg_discount_impact_by_category.csv]</parent-name>
+            <remote-alias>discount_band</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[agg_discount_impact_by_category.csv_DF3216F0B50C4D0DB544B89412C69512]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_profit</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_profit]</local-name>
+            <parent-name>[agg_discount_impact_by_category.csv]</parent-name>
+            <remote-alias>avg_profit</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_discount_impact_by_category.csv_DF3216F0B50C4D0DB544B89412C69512]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>loss_rate_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[loss_rate_pct]</local-name>
+            <parent-name>[agg_discount_impact_by_category.csv]</parent-name>
+            <remote-alias>loss_rate_pct</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_discount_impact_by_category.csv_DF3216F0B50C4D0DB544B89412C69512]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Heatmap Label' datatype='string' name='[Calculation_0586924278841354]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='STR(ROUND([avg_profit], 0)) + &quot;$\n&quot; + STR([loss_rate_pct]) + &quot;% lỗ&quot;' />
+      </column>
+      <column caption='agg_discount_impact_by_category.csv' datatype='table' name='[__tableau_internal_object_id__].[agg_discount_impact_by_category.csv_DF3216F0B50C4D0DB544B89412C69512]' role='measure' type='quantitative' />
+      <column caption='Avg Profit' datatype='real' name='[avg_profit]' role='measure' type='quantitative' />
+      <column caption='Category' datatype='string' name='[category]' role='dimension' type='nominal' />
+      <column caption='Discount Band' datatype='string' name='[discount_band]' role='dimension' type='nominal' />
+      <column caption='Loss Rate Pct' datatype='real' name='[loss_rate_pct]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='agg_discount_impact_by_category.csv' id='agg_discount_impact_by_category.csv_DF3216F0B50C4D0DB544B89412C69512'>
+            <properties context=''>
+              <relation connection='textscan.1louvrm17vzf6g1c4tdm10k6kjhn' name='agg_discount_impact_by_category.csv' table='[agg_discount_impact_by_category#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='category' ordinal='0' />
+                  <column datatype='string' name='discount_band' ordinal='1' />
+                  <column datatype='real' name='avg_profit' ordinal='2' />
+                  <column datatype='real' name='loss_rate_pct' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='agg_product_pareto' inline='true' name='federated.15mkp4i010orhv1asiphc166gd8a' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='agg_product_pareto' name='textscan.0wwpymz1v6zzbl13ku7hd1c9oi0z'>
+            <connection class='textscan' directory='C:/Users/Sang1/Downloads/Superstore-Analytics-Pro/data/aggregates' filename='agg_product_pareto.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0wwpymz1v6zzbl13ku7hd1c9oi0z' name='agg_product_pareto.csv' table='[agg_product_pareto#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='sub_category' ordinal='0' />
+            <column datatype='real' name='total_profit' ordinal='1' />
+            <column datatype='real' name='total_sales' ordinal='2' />
+            <column datatype='integer' name='total_orders' ordinal='3' />
+            <column datatype='real' name='profit_contribution_pct' ordinal='4' />
+            <column datatype='real' name='cumulative_pct' ordinal='5' />
+            <column datatype='boolean' name='is_top80' ordinal='6' />
+            <column datatype='real' name='profit_margin_pct' ordinal='7' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[agg_product_pareto.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sub_category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[sub_category]</local-name>
+            <parent-name>[agg_product_pareto.csv]</parent-name>
+            <remote-alias>sub_category</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[agg_product_pareto.csv_BB753D89C8684CB78F17C668AF63B98C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_profit</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_profit]</local-name>
+            <parent-name>[agg_product_pareto.csv]</parent-name>
+            <remote-alias>total_profit</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_product_pareto.csv_BB753D89C8684CB78F17C668AF63B98C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_sales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_sales]</local-name>
+            <parent-name>[agg_product_pareto.csv]</parent-name>
+            <remote-alias>total_sales</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_product_pareto.csv_BB753D89C8684CB78F17C668AF63B98C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_orders]</local-name>
+            <parent-name>[agg_product_pareto.csv]</parent-name>
+            <remote-alias>total_orders</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_product_pareto.csv_BB753D89C8684CB78F17C668AF63B98C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>profit_contribution_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[profit_contribution_pct]</local-name>
+            <parent-name>[agg_product_pareto.csv]</parent-name>
+            <remote-alias>profit_contribution_pct</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_product_pareto.csv_BB753D89C8684CB78F17C668AF63B98C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cumulative_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cumulative_pct]</local-name>
+            <parent-name>[agg_product_pareto.csv]</parent-name>
+            <remote-alias>cumulative_pct</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_product_pareto.csv_BB753D89C8684CB78F17C668AF63B98C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_top80</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[is_top80]</local-name>
+            <parent-name>[agg_product_pareto.csv]</parent-name>
+            <remote-alias>is_top80</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_product_pareto.csv_BB753D89C8684CB78F17C668AF63B98C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>profit_margin_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[profit_margin_pct]</local-name>
+            <parent-name>[agg_product_pareto.csv]</parent-name>
+            <remote-alias>profit_margin_pct</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[agg_product_pareto.csv_BB753D89C8684CB78F17C668AF63B98C]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Pareto Color' datatype='string' name='[Calculation_0586924283760651]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [sub_category] = &quot;Tables&quot; THEN &quot;Loss Maker&quot;&#13;&#10;ELSEIF [is_top80] = TRUE THEN &quot;Top 80%&quot;&#13;&#10;ELSE &quot;Bottom 20%&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Profit Direction' datatype='string' name='[Calculation_0586924308217868]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [total_profit] &gt;= 0 THEN &quot;Profit&quot;&#13;&#10;ELSE &quot;Loss&quot;&#13;&#10;END' />
+      </column>
+      <column caption='agg_product_pareto.csv' datatype='table' name='[__tableau_internal_object_id__].[agg_product_pareto.csv_BB753D89C8684CB78F17C668AF63B98C]' role='measure' type='quantitative' />
+      <column caption='Cumulative Pct' datatype='real' name='[cumulative_pct]' role='measure' type='quantitative' />
+      <column caption='Is Top80' datatype='boolean' name='[is_top80]' role='dimension' type='nominal' />
+      <column caption='Profit Contribution Pct' datatype='real' name='[profit_contribution_pct]' role='measure' type='quantitative' />
+      <column caption='Profit Margin Pct' datatype='real' name='[profit_margin_pct]' role='measure' type='quantitative' />
+      <column caption='Sub Category' datatype='string' name='[sub_category]' role='dimension' type='nominal' />
+      <column caption='Total Orders' datatype='integer' name='[total_orders]' role='measure' type='quantitative' />
+      <column caption='Tổng Lợi Nhuận' datatype='real' name='[total_profit]' role='measure' type='quantitative' />
+      <column caption='Total Sales' datatype='real' name='[total_sales]' role='measure' type='quantitative' />
+      <column-instance column='[Calculation_0586924283760651]' derivation='None' name='[none:Calculation_0586924283760651:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_0586924308217868]' derivation='None' name='[none:Calculation_0586924308217868:nk]' pivot='key' type='nominal' />
+      <layout common-percentage='0.54251' dim-ordering='alphabetic' measure-ordering='alphabetic' parameter-percentage='0.45749' show-structure='true' user-set-layout-v2='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Calculation_0586924283760651:nk]' type='palette'>
+            <map to='#2e6fbf'>
+              <bucket>&quot;Top 80\%&quot;</bucket>
+            </map>
+            <map to='#8c8c8c'>
+              <bucket>&quot;Bottom 20\%&quot;</bucket>
+            </map>
+            <map to='#e24b4a'>
+              <bucket>&quot;Loss Maker&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_0586924308217868:nk]' type='palette'>
+            <map to='#1d9e75'>
+              <bucket>&quot;Profit&quot;</bucket>
+            </map>
+            <map to='#e24b4a'>
+              <bucket>&quot;Loss&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='agg_product_pareto.csv' id='agg_product_pareto.csv_BB753D89C8684CB78F17C668AF63B98C'>
+            <properties context=''>
+              <relation connection='textscan.0wwpymz1v6zzbl13ku7hd1c9oi0z' name='agg_product_pareto.csv' table='[agg_product_pareto#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='sub_category' ordinal='0' />
+                  <column datatype='real' name='total_profit' ordinal='1' />
+                  <column datatype='real' name='total_sales' ordinal='2' />
+                  <column datatype='integer' name='total_orders' ordinal='3' />
+                  <column datatype='real' name='profit_contribution_pct' ordinal='4' />
+                  <column datatype='real' name='cumulative_pct' ordinal='5' />
+                  <column datatype='boolean' name='is_top80' ordinal='6' />
+                  <column datatype='real' name='profit_margin_pct' ordinal='7' />
                 </columns>
               </relation>
             </properties>
@@ -1755,6 +2373,167 @@
     </shared-view>
   </shared-views>
   <worksheets>
+    <worksheet name='Discount Heatmap'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Discount Heatmap' name='federated.1jad2aq160oeq313vbwf90pcptp1' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1jad2aq160oeq313vbwf90pcptp1'>
+            <column-instance column='[loss_rate_pct]' derivation='Avg' name='[avg:loss_rate_pct:qk]' pivot='key' type='quantitative' />
+            <column caption='Avg Profit' datatype='real' name='[avg_profit]' role='measure' type='quantitative' />
+            <column caption='Category' datatype='string' name='[category]' role='dimension' type='nominal' />
+            <column caption='Discount Band' datatype='string' name='[discount_band]' role='dimension' type='nominal' />
+            <column caption='Loss Rate Pct' datatype='real' name='[loss_rate_pct]' role='measure' type='quantitative' />
+            <column-instance column='[category]' derivation='None' name='[none:category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[discount_band]' derivation='None' name='[none:discount_band:nk]' pivot='key' type='nominal' />
+            <column-instance column='[avg_profit]' derivation='Sum' name='[sum:avg_profit:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[loss_rate_pct]' derivation='Sum' name='[sum:loss_rate_pct:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1jad2aq160oeq313vbwf90pcptp1].[sum:loss_rate_pct:qk]' value='c#,##0;(#,##0)' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#d0d7de' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1jad2aq160oeq313vbwf90pcptp1].[sum:loss_rate_pct:qk]' min='0.0' palette='color' type='interpolated' />
+            <encoding attr='color' field='[federated.1jad2aq160oeq313vbwf90pcptp1].[avg:loss_rate_pct:qk]' min='0.0' palette='color' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.1jad2aq160oeq313vbwf90pcptp1].[avg:loss_rate_pct:qk]' />
+              <text column='[federated.1jad2aq160oeq313vbwf90pcptp1].[sum:avg_profit:qk]' />
+              <text column='[federated.1jad2aq160oeq313vbwf90pcptp1].[sum:loss_rate_pct:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontname='Arial' fontsize='10'><![CDATA[<[federated.1jad2aq160oeq313vbwf90pcptp1].[sum:avg_profit:qk]> $]]></run>
+                <run>Æ&#10;</run>
+                <run fontname='Arial' fontsize='10'><![CDATA[<[federated.1jad2aq160oeq313vbwf90pcptp1].[sum:loss_rate_pct:qk]>% lỗ]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1jad2aq160oeq313vbwf90pcptp1].[none:category:nk]</rows>
+        <cols>[federated.1jad2aq160oeq313vbwf90pcptp1].[none:discount_band:nk]</cols>
+      </table>
+      <simple-id uuid='{185C20EB-2D68-4FF8-9D88-B7B2A2EA03B0}' />
+    </worksheet>
+    <worksheet name='Discount vs Profit '>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='fact_sales' name='federated.1orvg5r154dbgb1gnmr3q1loeqow' />
+            <datasource caption='agg_discount_impact' name='federated.1pgqexn1iqioua130n5vi1ggmzd1' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1orvg5r154dbgb1gnmr3q1loeqow'>
+            <column caption='Avg Profit by Band' datatype='real' name='[Calculation_0586924260380679]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='AVG([profit])&#13;&#10;&#13;&#10;// Kéo vào Rows — phân theo [Discount Band]&#13;&#10;// Kết quả đúng từng band:&#13;&#10;// 0-10%: +62.56  |  10-30%: +21.00&#13;&#10;// 30-50%: -61.56  |  50%+: -98.89' />
+            </column>
+            <column caption='Loss Rate % by Band' datatype='real' name='[Calculation_0586924260925448]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IIF([profit] &lt; 0, 1, 0)) / COUNT([order_id]) * 100' />
+            </column>
+            <column caption='Bar Color' datatype='string' name='[Calculation_0586924261556233]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='IF AVG([profit]) &gt;= 0 THEN &quot;Profit&quot;&#13;&#10;ELSE &quot;Loss&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Order Id' datatype='string' name='[order_id]' role='dimension' type='nominal' />
+            <column caption='Profit' datatype='real' name='[profit]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_0586924260380679]' derivation='User' name='[usr:Calculation_0586924260380679:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_0586924260925448]' derivation='User' name='[usr:Calculation_0586924260925448:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_0586924261556233]' derivation='User' name='[usr:Calculation_0586924261556233:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1pgqexn1iqioua130n5vi1ggmzd1'>
+            <column caption='Discount Band' datatype='string' name='[discount_band]' role='dimension' type='nominal' />
+            <column-instance column='[discount_band]' derivation='None' name='[none:discount_band:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1pgqexn1iqioua130n5vi1ggmzd1].[none:discount_band:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:discount_band:nk]' />
+              <groupfilter function='member' level='[none:discount_band:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1pgqexn1iqioua130n5vi1ggmzd1].[none:discount_band:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.1pgqexn1iqioua130n5vi1ggmzd1].[none:discount_band:nk]' value='23' />
+            <encoding attr='space' class='0' field='[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_0586924260925448:qk]' field-type='quantitative' fold='true' max='100.0' min='-100.0' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='height-header' value='16' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_0586924260380679:qk]' value='c&quot;$&quot;#,##0;-&quot;$&quot;#,##0' />
+            <format attr='text-format' field='[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_0586924260925448:qk]' value='c&quot;%&quot;#,##0;-&quot;%&quot;#,##0' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='fill-above' id='refline3' value='#00000000' />
+            <format attr='fill-below' id='refline3' value='#00000000' />
+            <format attr='fill-above' id='refline1' value='#00000000' />
+            <format attr='fill-below' id='refline1' value='#00000000' />
+            <format attr='line-visibility' id='refline1' value='on' />
+            <format attr='line-pattern-only' id='refline1' value='dashed' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='7' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <reference-line axis-column='[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_0586924260380679:qk]' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-pane' value-column='[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_0586924260380679:qk]' z-order='1' />
+          </pane>
+          <pane id='8' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_0586924260380679:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_0586924261556233:nk]' />
+            </encodings>
+          </pane>
+          <pane id='9' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_0586924260925448:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#e24b4a' />
+                <format attr='mark-markers-mode' value='all' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_0586924260380679:qk] + [federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_0586924260925448:qk])</rows>
+        <cols>[federated.1pgqexn1iqioua130n5vi1ggmzd1].[none:discount_band:nk]</cols>
+      </table>
+      <simple-id uuid='{D633F0CE-34E1-495B-8BE6-6A84003EB173}' />
+    </worksheet>
     <worksheet name='Market_Bar'>
       <table>
         <view>
@@ -1854,6 +2633,136 @@
         <cols>[federated.1a7agj317ep6b410grb7r0qag6po].[usr:Calculation_1453611508727811:qk]</cols>
       </table>
       <simple-id uuid='{F0DBA402-BB44-4F74-AB7D-CD637278D730}' />
+    </worksheet>
+    <worksheet name='Pareto Chart (80/20)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='agg_product_pareto' name='federated.15mkp4i010orhv1asiphc166gd8a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15mkp4i010orhv1asiphc166gd8a'>
+            <column caption='Pareto Color' datatype='string' name='[Calculation_0586924283760651]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [sub_category] = &quot;Tables&quot; THEN &quot;Loss Maker&quot;&#13;&#10;ELSEIF [is_top80] = TRUE THEN &quot;Top 80%&quot;&#13;&#10;ELSE &quot;Bottom 20%&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Cumulative Pct' datatype='real' name='[cumulative_pct]' role='measure' type='quantitative' />
+            <column caption='Is Top80' datatype='boolean' name='[is_top80]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_0586924283760651]' derivation='None' name='[none:Calculation_0586924283760651:nk]' pivot='key' type='nominal' />
+            <column-instance column='[sub_category]' derivation='None' name='[none:sub_category:nk]' pivot='key' type='nominal' />
+            <column caption='Sub Category' datatype='string' name='[sub_category]' role='dimension' type='nominal' />
+            <column-instance column='[cumulative_pct]' derivation='Sum' name='[sum:cumulative_pct:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_profit]' derivation='Sum' name='[sum:total_profit:qk]' pivot='key' type='quantitative' />
+            <column caption='Tổng Lợi Nhuận' datatype='real' name='[total_profit]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.15mkp4i010orhv1asiphc166gd8a].[none:sub_category:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:sub_category:nk]' />
+              <groupfilter function='member' level='[none:sub_category:nk]' member='&quot;Tables&quot;' />
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.15mkp4i010orhv1asiphc166gd8a].[none:sub_category:nk]' direction='DESC' using='[federated.15mkp4i010orhv1asiphc166gd8a].[sum:total_profit:qk]' />
+          <slices>
+            <column>[federated.15mkp4i010orhv1asiphc166gd8a].[none:sub_category:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.15mkp4i010orhv1asiphc166gd8a].[sum:cumulative_pct:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.15mkp4i010orhv1asiphc166gd8a].[sum:total_profit:qk]' field-type='quantitative' max='279898.39476309874' min='-8472.9772705482301' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.15mkp4i010orhv1asiphc166gd8a].[none:sub_category:nk]' value='41' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.15mkp4i010orhv1asiphc166gd8a].[sum:cumulative_pct:qk]' value='c#,##0&quot;%&quot;;(#,##0&quot;%&quot;)' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='line-visibility' id='refline0' value='on' />
+            <format attr='line-pattern-only' id='refline0' value='dashed' />
+            <format attr='stroke-color' id='refline0' value='#6a3fa04b' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='stroke-size' id='annotation_1' value='2' />
+            <format attr='stroke-color' id='annotation_1' value='#1b3a5c' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <reference-line axis-column='[federated.15mkp4i010orhv1asiphc166gd8a].[sum:cumulative_pct:qk]' enable-instant-analytics='true' formula='constant' id='refline0' label-type='automatic' scope='per-pane' value='80.0' value-column='[federated.15mkp4i010orhv1asiphc166gd8a].[sum:cumulative_pct:qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-line-pattern' value='solid' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.15mkp4i010orhv1asiphc166gd8a].[sum:total_profit:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.15mkp4i010orhv1asiphc166gd8a].[none:Calculation_0586924283760651:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-line-pattern' value='solid' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.15mkp4i010orhv1asiphc166gd8a].[sum:cumulative_pct:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#1b3a5c' />
+                <format attr='mark-line-pattern' value='dotted' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.15mkp4i010orhv1asiphc166gd8a].[sum:total_profit:qk] + [federated.15mkp4i010orhv1asiphc166gd8a].[sum:cumulative_pct:qk])</rows>
+        <cols>[federated.15mkp4i010orhv1asiphc166gd8a].[none:sub_category:nk]</cols>
+        <annotations>
+          <annotation class='point' id='1' mark-position='1' pullback='0' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#000000' fontname='Benton Sans Book'>Top 7 Sub-Category = 80% lợi nhuận</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord cell-offset='0.5'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.15mkp4i010orhv1asiphc166gd8a].[none:sub_category:nk]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>&quot;Storage&quot;</bucket>
+                    </multibucket>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='194071.19634035457'>
+                  <node-reference>
+                    <axis>[federated.15mkp4i010orhv1asiphc166gd8a].[sum:total_profit:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='107' y='24' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{F4AB901B-8E65-4E25-AE25-C1E1271B18CE}' />
     </worksheet>
     <worksheet name='Quarterly_Revenue'>
       <table>
@@ -2030,6 +2939,74 @@
       </table>
       <simple-id uuid='{2346AA01-E8FF-470E-81BB-45DC29E1A761}' />
     </worksheet>
+    <worksheet name='S1_LossOrders'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='fact_sales' name='federated.1orvg5r154dbgb1gnmr3q1loeqow' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1orvg5r154dbgb1gnmr3q1loeqow'>
+            <column caption='Loss_Order_Count' datatype='integer' name='[Calculation_0586924252835840]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IIF([profit] &lt; 0, 1, 0))' />
+            </column>
+            <column caption='Loss Rate Label' datatype='string' name='[Calculation_0586924255670275]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='STR(ROUND(SUM(IIF([profit]&lt;0,1,0)) / COUNT([order_id]) * 100, 1)) + &quot;% đơn lỗ&quot;' />
+            </column>
+            <column caption='Order Id' datatype='string' name='[order_id]' role='dimension' type='nominal' />
+            <column caption='Profit' datatype='real' name='[profit]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_0586924252835840]' derivation='User' name='[usr:Calculation_0586924252835840:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_0586924255670275]' derivation='User' name='[usr:Calculation_0586924255670275:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' value='203' />
+            <format attr='width' value='327' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#fdecea' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_0586924252835840:qk]' />
+              <text column='[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_0586924255670275:nk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#e24b4a' fontname='Arial' fontsize='28'><![CDATA[<[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_0586924252835840:qk]> đơn]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#e24b4a' fontname='Arial' fontsize='28'><![CDATA[<[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_0586924255670275:nk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{E60E45E0-6C32-4B39-89D9-5FC2797F2621}' />
+    </worksheet>
     <worksheet name='S1_Revenue'>
       <layout-options>
         <title>
@@ -2079,7 +3056,7 @@
         </view>
         <style>
           <style-rule element='cell'>
-            <format attr='width' value='493' />
+            <format attr='width' value='474' />
             <format attr='text-format' field='[federated.1agvfpk1hwbjh5181ow740ggdc48].[sum:total_sales:qk]' value='c&quot;$&quot;#,##0,,M;(&quot;$&quot;#,##0,,M)' />
             <format attr='text-align' value='center' />
             <format attr='vertical-align' value='auto' />
@@ -2215,6 +3192,130 @@
         <cols />
       </table>
       <simple-id uuid='{B6C8FAD3-E7C7-4436-B9E5-887294ADF8B6}' />
+    </worksheet>
+    <worksheet name='S2_RevenueAtRisk'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='fact_sales' name='federated.1orvg5r154dbgb1gnmr3q1loeqow' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1orvg5r154dbgb1gnmr3q1loeqow'>
+            <column caption='S2_RevenueAtRisk' datatype='real' name='[Calculation_0586924252930049]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IIF([profit] &lt; 0, [sales], 0))' />
+            </column>
+            <column caption='Profit' datatype='real' name='[profit]' role='measure' type='quantitative' />
+            <column caption='Sales' datatype='real' name='[sales]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_0586924252930049]' derivation='User' name='[usr:Calculation_0586924252930049:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' value='203' />
+            <format attr='width' value='327' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#fdecea' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_0586924252930049:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#e24b4a' fontname='Arial' fontsize='28'>Doanh thu đơn lỗ</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#e24b4a' fontname='Arial' fontsize='28'><![CDATA[$<[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_0586924252930049:qk]>]]></run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{3721A302-3A52-4C57-A14A-8B614973431B}' />
+    </worksheet>
+    <worksheet name='S3_AvgLoss'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='fact_sales' name='federated.1orvg5r154dbgb1gnmr3q1loeqow' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1orvg5r154dbgb1gnmr3q1loeqow'>
+            <column caption='Avg Loss per Order' datatype='real' name='[Calculation_0586924258611204]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IIF([profit]&lt;0, [profit], 0)) / SUM(IIF([profit]&lt;0, 1, 0))' />
+            </column>
+            <column caption='Profit' datatype='real' name='[profit]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_0586924258611204]' derivation='User' name='[usr:Calculation_0586924258611204:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' value='128' />
+            <format attr='text-format' field='[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_0586924258611204:qk]' value='c&quot;$&quot;#,##0.00;-&quot;$&quot;#,##0.00' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#fdecea' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_0586924258611204:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#e24b4a' fontname='Arial' fontsize='28'>Tiền lỗ mỗi đơn</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#e24b4a' fontname='Arial' fontsize='28'><![CDATA[<[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_0586924258611204:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{115A232B-892B-4802-8B14-9087EAEB3A4E}' />
     </worksheet>
     <worksheet name='S3_Margin'>
       <table>
@@ -2387,6 +3488,86 @@
       </table>
       <simple-id uuid='{1FBFC1F5-4E20-4908-A1BD-C768E3227B88}' />
     </worksheet>
+    <worksheet name='Scatter Plot'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='fact_sales' name='federated.1orvg5r154dbgb1gnmr3q1loeqow' />
+            <datasource caption='agg_product_pareto' name='federated.15mkp4i010orhv1asiphc166gd8a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15mkp4i010orhv1asiphc166gd8a'>
+            <column-instance column='[sub_category]' derivation='None' name='[none:sub_category:nk]' pivot='key' type='nominal' />
+            <column caption='Sub Category' datatype='string' name='[sub_category]' role='dimension' type='nominal' />
+            <column-instance column='[total_orders]' derivation='Sum' name='[sum:total_orders:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Orders' datatype='integer' name='[total_orders]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1orvg5r154dbgb1gnmr3q1loeqow'>
+            <column caption='Avg Discount %' datatype='real' name='[Calculation_0586924310003725]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='AVG([discount]) * 100' />
+            </column>
+            <column caption='Avg Profit Margin %' datatype='real' name='[Calculation_0586924310073358]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([profit]) / SUM([sales]) * 100' />
+            </column>
+            <column caption='Category' datatype='string' name='[category]' role='dimension' type='nominal' />
+            <column caption='Discount' datatype='real' name='[discount]' role='measure' type='quantitative' />
+            <column-instance column='[category]' derivation='None' name='[none:category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[sub_category]' derivation='None' name='[none:sub_category:nk]' pivot='key' type='nominal' />
+            <column caption='Profit' datatype='real' name='[profit]' role='measure' type='quantitative' />
+            <column caption='Sales' datatype='real' name='[sales]' role='measure' type='quantitative' />
+            <column caption='Sub Category' datatype='string' name='[sub_category]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_0586924310003725]' derivation='User' name='[usr:Calculation_0586924310003725:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_0586924310073358]' derivation='User' name='[usr:Calculation_0586924310073358:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='line-visibility' id='refline0' value='on' />
+            <format attr='line-pattern-only' id='refline0' value='dashed' />
+            <format attr='stroke-color' id='refline0' value='#6a3fa04b' />
+            <format attr='fill-above' id='refline1' value='#00000000' />
+            <format attr='fill-below' id='refline1' value='#00000000' />
+            <format attr='stroke-color' id='refline1' value='#e24b4a4b' />
+            <format attr='line-visibility' id='refline1' value='on' />
+            <format attr='line-pattern-only' id='refline1' value='dashed' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <_.fcp.IndividualControlFormatting.true...style-rule element='legend'>
+            <_.fcp.IndividualControlFormatting.true...format attr='color' field='[federated.15mkp4i010orhv1asiphc166gd8a].[sum:total_orders:qk]' id='legend-size' value='#000000' />
+          </_.fcp.IndividualControlFormatting.true...style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.1orvg5r154dbgb1gnmr3q1loeqow].[none:sub_category:nk]' />
+              <color column='[federated.1orvg5r154dbgb1gnmr3q1loeqow].[none:category:nk]' />
+              <size column='[federated.15mkp4i010orhv1asiphc166gd8a].[sum:total_orders:qk]' />
+              <text column='[federated.15mkp4i010orhv1asiphc166gd8a].[none:sub_category:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_0586924310003725:qk]' enable-instant-analytics='true' formula='constant' id='refline0' label='Ngưỡng 30% Discount' label-type='custom' scope='per-pane' value='30.0' value-column='[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_0586924310003725:qk]' z-order='1' />
+            <reference-line axis-column='[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_0586924310073358:qk]' enable-instant-analytics='true' formula='constant' id='refline1' label='Profit = 0' label-type='custom' scope='per-pane' value='0.0' value-column='[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_0586924310073358:qk]' z-order='2' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_0586924310073358:qk]</rows>
+        <cols>[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_0586924310003725:qk]</cols>
+      </table>
+      <simple-id uuid='{677EA1AA-6031-4037-90F6-30826A7CC45B}' />
+    </worksheet>
     <worksheet name='Segment_Pie'>
       <table>
         <view>
@@ -2536,6 +3717,72 @@
         <cols />
       </table>
       <simple-id uuid='{55ECB2A4-ECEE-4AE0-B56C-8B512C0C45B2}' />
+    </worksheet>
+    <worksheet name='Sub-Category Waterfall / Profit Bar'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='agg_product_pareto' name='federated.15mkp4i010orhv1asiphc166gd8a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15mkp4i010orhv1asiphc166gd8a'>
+            <column caption='Profit Direction' datatype='string' name='[Calculation_0586924308217868]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [total_profit] &gt;= 0 THEN &quot;Profit&quot;&#13;&#10;ELSE &quot;Loss&quot;&#13;&#10;END' />
+            </column>
+            <column-instance column='[Calculation_0586924308217868]' derivation='None' name='[none:Calculation_0586924308217868:nk]' pivot='key' type='nominal' />
+            <column-instance column='[sub_category]' derivation='None' name='[none:sub_category:nk]' pivot='key' type='nominal' />
+            <column caption='Profit Margin Pct' datatype='real' name='[profit_margin_pct]' role='measure' type='quantitative' />
+            <column caption='Sub Category' datatype='string' name='[sub_category]' role='dimension' type='nominal' />
+            <column-instance column='[profit_margin_pct]' derivation='Sum' name='[sum:profit_margin_pct:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_profit]' derivation='Sum' name='[sum:total_profit:qk]' pivot='key' type='quantitative' />
+            <column caption='Tổng Lợi Nhuận' datatype='real' name='[total_profit]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.15mkp4i010orhv1asiphc166gd8a].[none:sub_category:nk]' direction='DESC' using='[federated.15mkp4i010orhv1asiphc166gd8a].[sum:total_profit:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='wrap' value='auto' />
+            <format attr='text-align' value='auto' />
+            <format attr='text-align' data-class='subtotal' scope='rows' value='auto' />
+            <format attr='text-format' field='[federated.15mkp4i010orhv1asiphc166gd8a].[sum:profit_margin_pct:qk]' value='c#,##0.0&quot;%&quot;;-#,##0.0&quot;%&quot;' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='stroke-size' id='refline0' value='2' />
+            <format attr='stroke-color' id='refline0' value='#00000084' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.15mkp4i010orhv1asiphc166gd8a].[none:Calculation_0586924308217868:nk]' />
+              <text column='[federated.15mkp4i010orhv1asiphc166gd8a].[sum:profit_margin_pct:qk]' />
+            </encodings>
+            <reference-line axis-column='[federated.15mkp4i010orhv1asiphc166gd8a].[sum:total_profit:qk]' enable-instant-analytics='true' formula='constant' id='refline0' label-type='automatic' scope='per-pane' value='0.0' value-column='[federated.15mkp4i010orhv1asiphc166gd8a].[sum:total_profit:qk]' z-order='1' />
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.15mkp4i010orhv1asiphc166gd8a].[sum:total_profit:qk]</rows>
+        <cols>[federated.15mkp4i010orhv1asiphc166gd8a].[none:sub_category:nk]</cols>
+      </table>
+      <simple-id uuid='{7B6CCE8F-40F9-4F85-A157-1FC9E06B6E38}' />
     </worksheet>
     <worksheet name='YoY_Trend'>
       <table>
@@ -2865,8 +4112,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1850' minheight='1850' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='77' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97916' id='76' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='100000' id='79' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='78' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
                 <zone forceUpdate='true' h='10937' id='5' type-v2='text' w='98828' x='586' y='1042'>
                   <formatted-text>
                     <run bold='true' fontcolor='#ffffff' fontname='Arial' fontsize='20'>Tổng Quan Hoạt Động Kinh Doanh — Global Superstore</run>
@@ -2937,12 +4184,12 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='252' h='33854' id='50' is-fixed='true' name='YoY_Trend' show-title='false' w='56882' x='586' y='22787'>
+                <zone fixed-size='248' h='33854' id='50' is-fixed='true' name='YoY_Trend' show-title='false' w='56882' x='586' y='22787'>
                   <layout-cache minheight='122' type-h='scalable' type-w='cell' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
-                    <format attr='border-style' value='none' />
-                    <format attr='border-width' value='0' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='2' />
                     <format attr='margin' value='4' />
                     <format attr='padding' value='0' />
                   </zone-style>
@@ -2965,12 +4212,12 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='252' h='33854' id='55' is-fixed='true' name='Market_Bar' show-title='false' w='41946' x='57468' y='22787'>
+                <zone fixed-size='248' h='33854' id='55' is-fixed='true' name='Market_Bar' show-title='false' w='41946' x='57468' y='22787'>
                   <layout-cache cell-count-h='7' minwidth='180' type-h='cell' type-w='scalable' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
-                    <format attr='border-style' value='none' />
-                    <format attr='border-width' value='0' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='2' />
                     <format attr='margin' value='4' />
                     <format attr='padding' value='0' />
                   </zone-style>
@@ -2979,8 +4226,8 @@
                   <layout-cache cell-count-w='16' minheight='142' type-h='scalable' type-w='cell' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
-                    <format attr='border-style' value='none' />
-                    <format attr='border-width' value='0' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='2' />
                     <format attr='margin' value='4' />
                     <format attr='padding' value='0' />
                   </zone-style>
@@ -2989,8 +4236,8 @@
                   <layout-cache cell-count-w='1' minheight='100' type-h='scalable' type-w='cell' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
-                    <format attr='border-style' value='none' />
-                    <format attr='border-width' value='0' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='2' />
                     <format attr='margin' value='4' />
                     <format attr='padding' value='0' />
                   </zone-style>
@@ -3018,8 +4265,145 @@
       </devicelayouts>
       <simple-id uuid='{BD5464FA-491E-4AAE-84E4-F3DC532B51C4}' />
     </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 2'>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#1b3a5c' />
+        </style-rule>
+      </style>
+      <size maxheight='768' maxwidth='1366' minheight='768' minwidth='1366' preset-index='0' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='73958' id='19' param='horz' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='73958' id='13' param='horz' type-v2='layout-flow' w='98828' x='586' y='1042'>
+              <zone h='73958' id='3' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+                <zone forceUpdate='true' h='5078' id='5' type-v2='text' w='98828' x='586' y='1042'>
+                  <formatted-text>
+                    <run bold='true' fontcolor='#ffffff' fontname='Arial' fontsize='20'>Phân Tích Lợi Nhuận &amp; Chiết Khấu</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='92' h='11979' id='6' is-fixed='true' layout-strategy-id='distribute-evenly' param='horz' type-v2='layout-flow' w='98828' x='586' y='6120'>
+                  <zone h='11979' id='7' name='S1_LossOrders' show-title='false' w='32943' x='586' y='6120'>
+                    <layout-cache cell-count-h='1' cell-count-w='1' type-h='cell' type-w='cell' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='11979' id='27' name='S2_RevenueAtRisk' show-title='false' w='32942' x='33529' y='6120'>
+                    <layout-cache cell-count-h='1' cell-count-w='1' type-h='cell' type-w='cell' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='11979' id='9' name='S3_AvgLoss' show-title='false' w='32943' x='66471' y='6120'>
+                    <layout-cache cell-count-h='1' cell-count-w='1' type-h='cell' type-w='cell' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+                <zone fixed-size='190' h='24740' id='10' is-fixed='true' param='horz' type-v2='layout-flow' w='98828' x='586' y='18099'>
+                  <zone h='24740' id='11' name='Discount vs Profit ' show-title='false' w='51171' x='586' y='18099'>
+                    <layout-cache cell-count-w='4' minheight='140' non-cell-size-w='148' type-h='scalable' type-w='cell' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='24740' id='15' name='Discount Heatmap' show-title='false' w='47657' x='51757' y='18099'>
+                    <layout-cache cell-count-h='3' cell-count-w='4' non-cell-size-h='40' non-cell-size-w='100' type-h='cell' type-w='cell' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+                <zone h='32161' id='25' is-fixed='true' type-v2='layout-basic' w='98828' x='586' y='42839'>
+                  <zone h='32161' id='16' param='horz' type-v2='layout-flow' w='51171' x='586' y='42839'>
+                    <zone h='32161' id='17' name='Pareto Chart (80/20)' show-title='false' w='51171' x='586' y='42839'>
+                      <layout-cache cell-count-w='16' minheight='142' non-cell-size-w='140' type-h='scalable' type-w='cell' />
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                  </zone>
+                  <zone h='32161' id='26' param='horz' type-v2='layout-flow' w='47657' x='51757' y='42839'>
+                    <zone h='32161' id='21' name='Sub-Category Waterfall / Profit Bar' show-title='false' w='47657' x='51757' y='42839'>
+                      <layout-cache cell-count-w='17' minheight='200' non-cell-size-w='66' type-h='scalable' type-w='cell' />
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='23958' id='22' param='vert' type-v2='layout-flow' w='98828' x='586' y='75000'>
+            <zone h='23958' id='23' name='Scatter Plot' show-title='false' w='98828' x='586' y='75000'>
+              <layout-cache minheight='155' type-h='scalable' type-w='fixed' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='15234' id='24' name='Scatter Plot' pane-specification-id='0' param='[federated.15mkp4i010orhv1asiphc166gd8a].[sum:total_orders:qk]' type-v2='size' w='10249' x='69107' y='75651' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='1' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{6A39846D-59D6-4744-BFC4-642E0712E5D1}' />
+    </dashboard>
   </dashboards>
-  <windows source-height='93'>
+  <windows source-height='156'>
     <window class='worksheet' name='S1_Revenue'>
       <cards>
         <edge name='left'>
@@ -3222,7 +4606,7 @@
       </cards>
       <simple-id uuid='{17DD4256-B5B0-449D-A9C1-A43F26C89086}' />
     </window>
-    <window class='dashboard' maximized='true' name='Dashboard 1'>
+    <window class='dashboard' name='Dashboard 1'>
       <viewpoints>
         <viewpoint name='Market_Bar'>
           <zoom type='entire-view' />
@@ -3249,8 +4633,240 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='5' />
+      <active id='8' />
       <simple-id uuid='{8D24F697-42D2-4156-BD21-4E05B54F2BAA}' />
+    </window>
+    <window class='worksheet' name='S1_LossOrders'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{B04B77AD-68B5-47EB-B49E-D36871570E82}' />
+    </window>
+    <window class='worksheet' name='S2_RevenueAtRisk'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{27F484C1-1208-4FD4-96C5-13EFDE91F1C5}' />
+    </window>
+    <window class='worksheet' name='S3_AvgLoss'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6AC369DB-60A8-42C7-B561-0CA5ADBA31E5}' />
+    </window>
+    <window class='worksheet' name='Discount vs Profit '>
+      <cards>
+        <edge name='left'>
+          <strip size='138'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='8' param='[federated.1orvg5r154dbgb1gnmr3q1loeqow].[usr:Calculation_0586924261556233:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{0BB90B90-61D8-44C9-B1C5-95A4A2404B62}' />
+    </window>
+    <window class='worksheet' name='Discount Heatmap'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{DB34A147-5343-459D-80FD-BEF362A24CDE}' />
+    </window>
+    <window class='worksheet' name='Pareto Chart (80/20)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.15mkp4i010orhv1asiphc166gd8a].[none:Calculation_0586924283760651:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{B77AFAF2-4875-44ED-9650-996298AD03AC}' />
+    </window>
+    <window class='worksheet' name='Sub-Category Waterfall / Profit Bar'>
+      <cards>
+        <edge name='left'>
+          <strip size='170'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{6F6D4636-9BC9-45AF-83BE-FA445700ED0F}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Scatter Plot'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.15mkp4i010orhv1asiphc166gd8a].[sum:total_orders:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{1FADF665-760D-4CF9-8EC7-F2CB1E2E80D2}' />
+    </window>
+    <window class='dashboard' name='Dashboard 2'>
+      <viewpoints>
+        <viewpoint name='Discount Heatmap'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Discount vs Profit '>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Pareto Chart (80/20)'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='S1_LossOrders'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='S2_RevenueAtRisk'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='S3_AvgLoss'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Scatter Plot'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sub-Category Waterfall / Profit Bar'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='23' />
+      <simple-id uuid='{93C504D4-EE52-4F1C-8590-5339E88D8BD1}' />
     </window>
   </windows>
 </workbook>
