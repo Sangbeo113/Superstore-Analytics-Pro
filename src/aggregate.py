@@ -305,7 +305,9 @@ def agg_shipping_analysis() -> None:
     df = _load_cleaned(parse_dates=["order_date", "ship_date"])
 
     df["ship_delay_days"] = (df["ship_date"] - df["order_date"]).dt.days
-
+    df = df[df["ship_delay_days"] >= 0].copy()
+    df = df[df["shipping_cost"] > 0].copy()
+    
     # Tổng hợp theo ship_mode × market
     ship_agg = (
         df.groupby(["ship_mode", "market"])
@@ -318,8 +320,11 @@ def agg_shipping_analysis() -> None:
         )
         .reset_index()
     )
-    ship_agg["avg_delay_days"]    = ship_agg["avg_delay_days"].round(2)
-    ship_agg["avg_shipping_cost"] = ship_agg["avg_shipping_cost"].round(2)
+    numeric_cols = ["avg_delay_days", "avg_shipping_cost", "total_shipping_cost"]
+    for col in numeric_cols:
+        ship_agg[col] = ship_agg[col].round(2)
+        # Ép kiểu float thuần túy, tuyệt đối không dùng .map('${:,.2f}'.format) ở đây
+        ship_agg[col] = ship_agg[col].astype(float)
 
     # Tổng hợp theo ship_mode × order_priority (Late delivery risk)
     priority_ship = (
@@ -330,7 +335,7 @@ def agg_shipping_analysis() -> None:
         )
         .reset_index()
     )
-    priority_ship["avg_delay_days"] = priority_ship["avg_delay_days"].round(2)
+    priority_ship["avg_delay_days"] = priority_ship["avg_delay_days"].round(2).astype(float)
 
     _save(ship_agg,      "agg_shipping_analysis.csv")
     _save(priority_ship, "agg_shipping_by_priority.csv")
