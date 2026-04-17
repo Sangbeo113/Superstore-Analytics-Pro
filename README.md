@@ -170,11 +170,11 @@ Profit Margin: 10.98% → 11.72% (chỉ tăng +0.74%)
 
 ---
 
-### Dashboard 4 — Cohort Retention Analysis
+### Dashboard 4 — SHIPPING & GEOGRAPHIC ANALYSIS
 
-![Cohort Dashboard](docs/images/dashboard_cohort.png)
+![Cohort Dashboard](docs/images/dashboard_4.png)
 
-*Heatmap ma trận giữ chân khách hàng theo tháng — phát hiện điểm rơi tỷ lệ retention.*
+*Geographic Map Hiển thị các phần trăm lợi nhuận giữa các quốc gia mua hàng.*
 
 >  File Tableau: [`dashboards/Final_Superstore_Story.twbx`](dashboards/Final_Superstore_Story.twbx)
 
